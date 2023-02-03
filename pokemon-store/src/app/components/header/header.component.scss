@@ -1,0 +1,62 @@
+.header {
+  position: relative;
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #006cb5;
+
+  .headerParagraph {
+    color: #ffaf01;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+
+  .cartIcon {
+    cursor: pointer;
+    position: absolute;
+    right: 12%;
+    font-size: 2.8em;
+    color: #ffaf01;
+  }
+  .cartIcon::after {
+    content: "MY CART"; // Ne fonctionne pas en minuscule
+    display: none;
+    font-size: 0.4em;
+    position: absolute;
+    right: -50%;
+  }
+  .cartIcon:hover::after {
+    display: block;
+  }
+
+  .userIcon {
+    @extend .cartIcon;
+    right: 7%;
+  }
+  .userIcon::after {
+    content: "MY ACCOUNT"; // Ne fonctionne pas en minuscule
+    display: none;
+    font-size: 0.4em;
+    position: absolute;
+    right: -90%;
+  }
+  .userIcon:hover::after {
+    display: block;
+  }
+
+  .logoutIcon {
+    @extend .cartIcon;
+    right: 2%;
+  }
+  .logoutIcon::after {
+    content: "LOG OUT"; // Ne fonctionne pas en minuscule
+    display: none;
+    font-size: 0.4em;
+    position: absolute;
+    right: -30%;
+  }
+  .logoutIcon:hover::after {
+    display: block;
+  }
+}
