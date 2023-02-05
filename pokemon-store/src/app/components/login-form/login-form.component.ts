@@ -49,14 +49,14 @@ export class LoginFormComponent {
           // ********************** Stocker ici le JWT au lieu de l'id
           //
           localStorage.setItem('id', userFound.id.toString());
-          alert('You are now logged in !');
+          alert('Vous êtes connecté !');
           this.router.navigate(['/homePage']);
         } else {
-          alert('Authentication error !');
+          alert("Erreur d'authentification !");
         }
         // Si l'utilisateur n'existe pas, affiche une erreur
       } else if (!userExist) {
-        alert('Authentication error !');
+        alert("Erreur d'authentification !");
       }
     }
   }
