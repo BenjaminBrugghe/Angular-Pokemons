@@ -30,6 +30,20 @@ export class ApiServiceService {
   }
 
   /**
+   * Récupère un utilisateur par son id
+   * @param id L'id de l'utilisateur à récupérer
+   * @returns L'utilisateur correspondant à l'id
+   */
+  public async getUserById(id: number): Promise<any> {
+    try {
+      const response = await fetch(`${this._URL_USERS}/${id}`);
+      return await response.json();
+    } catch (error) {
+      return console.log(error);
+    }
+  }
+
+  /**
    * Récupère un utilisateur par son email
    * @param email L'email de l'utilisateur à récupérer
    * @returns L'utilisateur correspondant à l'email
@@ -59,6 +73,29 @@ export class ApiServiceService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(user),
+      });
+      return await response.json();
+    } catch (error) {
+      return console.log(error);
+    }
+  }
+
+  /**
+   * Ajoute le pokémon cliqué au panier de l'utilisateur
+   * @param id L'id de l'utilisateur
+   * @param pokemon Le pokémon qui a été cliqué
+   * @returns L'utilisateur avec le pokémon ajouté au panier
+   */
+  public async addToCart(id: number, pokemon: Pokemons): Promise<any> {
+    const userFound = await this.getUserById(id);
+    try {
+      userFound.cart.push(pokemon);
+      const response = await fetch(`${this._URL_USERS}/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userFound),
       });
       return await response.json();
     } catch (error) {
