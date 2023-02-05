@@ -1,0 +1,44 @@
+.homepageInput {
+  height: 30px;
+  width: 30%;
+  margin: 0.4% 35%;
+  font-size: 1.2em;
+  border-radius: 10px;
+}
+
+.filterByType {
+  height: 8vh;
+  width: 88vw;
+  margin: 0 5vw 0 7vw;
+
+  div {
+    margin-bottom: 1%;
+  }
+
+  label {
+    font-size: 1.6em;
+  }
+
+  input {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-right: 7.3%;
+  }
+}
+
+.homepageContainer {
+  height: 85vh;
+  width: 86vw;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  .cardMapped {
+    display: flex;
+    margin-right: 1%;
+  }
+}

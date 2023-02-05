@@ -1,0 +1,15 @@
+<div class="pokemonCard">
+    <p class="pokemonName"> {{pokemon.name}} </p>
+    <div class="divImageAndType">
+        <img [src]="pokemon.image" alt="pokemon image">
+        <div class="divTypes">
+            <p class="type1">Type 1 : {{pokemon.type1}} </p>
+
+            <p *ngIf="pokemon.type2 == '' " class="type2">Type 2 : None</p>
+            <p *ngIf="pokemon.type2 != '' " class="type2">Type 2 : {{pokemon.type2}} </p>
+        </div>
+    </div>
+    <p class="pokemonDescription">Description : {{pokemon.description}} </p>
+    <p class="pokemonPrice"> {{pokemon.price}} €</p>
+    <button class="addToCartButton" (click)="addToCart()">Ajouter au panier</button>
+</div>
