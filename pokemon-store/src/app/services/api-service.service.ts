@@ -20,13 +20,11 @@ export class ApiServiceService {
    * Récupère la liste des utilisateurs
    * @returns La liste des utilisateurs
    */
-  public async getAllUsers(): Promise<any> {
-    try {
-      const response = await fetch(this._URL_USERS);
-      return await response.json();
-    } catch (error) {
-      return console.log(error);
-    }
+  public async getAllUsers(): Promise<Users> {
+    const response = await fetch(this._URL_USERS)
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+    return response;
   }
 
   /**
@@ -34,13 +32,11 @@ export class ApiServiceService {
    * @param id L'id de l'utilisateur à récupérer
    * @returns L'utilisateur correspondant à l'id
    */
-  public async getUserById(id: number): Promise<any> {
-    try {
-      const response = await fetch(`${this._URL_USERS}/${id}`);
-      return await response.json();
-    } catch (error) {
-      return console.log(error);
-    }
+  public async getUserById(id: number): Promise<Users> {
+    const response = await fetch(`${this._URL_USERS}/${id}`)
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+    return response;
   }
 
   /**
@@ -48,14 +44,11 @@ export class ApiServiceService {
    * @param email L'email de l'utilisateur à récupérer
    * @returns L'utilisateur correspondant à l'email
    */
-  public async getUserByEmail(email: string): Promise<any> {
-    const userList = await this.getAllUsers();
-    try {
-      const userFound = userList.find((user: Users) => user.email === email);
-      return userFound;
-    } catch (error) {
-      console.log(error);
-    }
+  public async getUserByEmail(email: string): Promise<Users> {
+    const response = await this.getAllUsers()
+      .then((response) => response.find((user: Users) => user.email === email))
+      .catch((error) => console.log(error));
+    return response;
   }
 
   // ********** POST **********
@@ -65,19 +58,17 @@ export class ApiServiceService {
    * @param user L'utilisateur à créer
    * @returns L'utilisateur créé
    */
-  public async createUser(user: any): Promise<any> {
-    try {
-      const response = await fetch(this._URL_USERS, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(user),
-      });
-      return await response.json();
-    } catch (error) {
-      return console.log(error);
-    }
+  public async createUser(user: any): Promise<Users> {
+    const response = await fetch(this._URL_USERS, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+    return response;
   }
 
   /**
@@ -86,21 +77,20 @@ export class ApiServiceService {
    * @param pokemon Le pokémon qui a été cliqué
    * @returns L'utilisateur avec le pokémon ajouté au panier
    */
-  public async addToCart(id: number, pokemon: Pokemons): Promise<any> {
+  public async addToCart(id: number, pokemon: Pokemons): Promise<Users> {
     const userFound = await this.getUserById(id);
-    try {
-      userFound.cart.push(pokemon);
-      const response = await fetch(`${this._URL_USERS}/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userFound),
-      });
-      return await response.json();
-    } catch (error) {
-      return console.log(error);
-    }
+    userFound.cart.push(pokemon);
+
+    const response = await fetch(`${this._URL_USERS}/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userFound),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+    return response;
   }
 
   // ******************** POKEMONS ********************
@@ -112,8 +102,10 @@ export class ApiServiceService {
    * @returns La liste des pokémons
    */
   public async getAllPokemons(): Promise<Pokemons[]> {
-    const response = await fetch(this._URL_POKEMONS);
-    return await response.json();
+    const response = await fetch(this._URL_POKEMONS)
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+    return response;
   }
 
   // ******************** VERIFICATIONS ********************
