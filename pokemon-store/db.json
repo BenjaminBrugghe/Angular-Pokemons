@@ -812,21 +812,21 @@
     {
       "id": 81,
       "name": "Magnéti",
-      "type1": "Électrik",
+      "type1": "Electrique",
       "type2": "",
       "evolution": true,
       "price": 23.99,
-      "description": "Magnéti est un Pokémon de type Électrik. Il se trouve dans la région de Kanto et évolue en Magnéton.",
+      "description": "Magnéti est un Pokémon de type Electrique. Il se trouve dans la région de Kanto et évolue en Magnéton.",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png"
     },
     {
       "id": 82,
       "name": "Magnéton",
-      "type1": "Électrik",
+      "type1": "Electrique",
       "type2": "",
       "evolution": true,
       "price": 37.99,
-      "description": "Magnéton est un Pokémon de type Électrik. Il est l'évolution de Magnéti.",
+      "description": "Magnéton est un Pokémon de type Electrique. Il est l'évolution de Magnéti.",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/082.png"
     },
     {
@@ -1002,21 +1002,21 @@
     {
       "id": 100,
       "name": "Voltorbe",
-      "type1": "Électrik",
+      "type1": "Electrique",
       "type2": "",
       "evolution": true,
       "price": 24.99,
-      "description": "Voltorbe est un Pokémon de type Électrik. Il se trouve dans la région de Kanto et évolue en Électrode.",
+      "description": "Voltorbe est un Pokémon de type Electrique. Il se trouve dans la région de Kanto et évolue en Électrode.",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/100.png"
     },
     {
       "id": 101,
       "name": "Électrode",
-      "type1": "Électrik",
+      "type1": "Electrique",
       "type2": "",
       "evolution": true,
       "price": 37.99,
-      "description": "Électrode est un Pokémon de type Électrik. Il est l'évolution de Voltorbe.",
+      "description": "Électrode est un Pokémon de type Electrique. Il est l'évolution de Voltorbe.",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/101.png"
     },
     {
@@ -1252,11 +1252,11 @@
     {
       "id": 125,
       "name": "Élektek",
-      "type1": "Électrik",
+      "type1": "Electrique",
       "type2": "",
       "evolution": false,
       "price": 37.99,
-      "description": "Élektek est un Pokémon de type Électrik. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+      "description": "Élektek est un Pokémon de type Electrique. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/125.png"
     },
     {
@@ -1352,11 +1352,11 @@
     {
       "id": 135,
       "name": "Voltali",
-      "type1": "Électrik",
+      "type1": "Electrique",
       "type2": "",
       "evolution": true,
       "price": 51.99,
-      "description": "Voltali est un Pokémon de type Électrik. Il est l'évolution d'Évoli.",
+      "description": "Voltali est un Pokémon de type Electrique. Il est l'évolution d'Évoli.",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/135.png"
     },
     {
@@ -1452,11 +1452,11 @@
     {
       "id": 145,
       "name": "Électhor",
-      "type1": "Électrik",
+      "type1": "Electrique",
       "type2": "",
       "evolution": false,
       "price": 79.99,
-      "description": "Électhor est un Pokémon de type Électrik. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+      "description": "Électhor est un Pokémon de type Electrique. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/145.png"
     },
     {
