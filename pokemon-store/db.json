@@ -1,11 +1,11 @@
 {
   "users": [
     {
-      "cart": [],
       "firstName": "Benjamin",
       "lastName": "Brugghe",
       "email": "Adresse@email.com",
       "password": "azerty",
+      "cart": [],
       "id": 1
     }
   ],
