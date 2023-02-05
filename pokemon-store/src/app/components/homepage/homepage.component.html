@@ -1,0 +1,76 @@
+<input class="homepageInput" type="text" value={{searchbarInput}} [(ngModel)]="searchbarInput"
+    (change)="resetCheckbox()" placeholder="Rechercher un pokémon par nom...">
+
+<div class="filterByType">
+    <div>
+        <label for="feu">Feu</label>
+        <input type="checkbox" id="feu" value="feu" (change)="onCheckboxChange($event)">
+
+        <label for="eau">Eau</label>
+        <input type="checkbox" id="eau" value="eau" (change)="onCheckboxChange($event)">
+
+        <label for="plante">Plante</label>
+        <input type="checkbox" id="plante" value="plante" (change)="onCheckboxChange($event)">
+
+        <label for="poison">Poison</label>
+        <input type="checkbox" id="poison" value="poison" (change)="onCheckboxChange($event)">
+
+        <label for="vol">Vol</label>
+        <input type="checkbox" id="vol" value="vol" (change)="onCheckboxChange($event)">
+
+        <label for="insecte">Insecte</label>
+        <input type="checkbox" id="insecte" value="insecte" (change)="onCheckboxChange($event)">
+
+        <label for="normal">Normal</label>
+        <input type="checkbox" id="normal" value="normal" (change)="onCheckboxChange($event)">
+
+        <label for="electrique">Electrique</label>
+        <input type="checkbox" id="electrique" value="electrique" (change)="onCheckboxChange($event)">
+    </div>
+
+    <div>
+        <label for="sol">Sol</label>
+        <input type="checkbox" id="sol" value="sol" (change)="onCheckboxChange($event)">
+
+        <label for="fée">Fée</label>
+        <input type="checkbox" id="fée" value="fée" (change)="onCheckboxChange($event)">
+
+        <label for="combat">Combat</label>
+        <input type="checkbox" id="combat" value="combat" (change)="onCheckboxChange($event)">
+
+        <label for="psy">Psy</label>
+        <input type="checkbox" id="psy" value="psy" (change)="onCheckboxChange($event)">
+
+        <label for="roche">Roche</label>
+        <input type="checkbox" id="roche" value="roche" (change)="onCheckboxChange($event)">
+
+        <label for="spectre">Spectre</label>
+        <input type="checkbox" id="spectre" value="spectre" (change)="onCheckboxChange($event)">
+
+        <label for="glace">Glace</label>
+        <input type="checkbox" id="glace" value="glace" (change)="onCheckboxChange($event)">
+
+        <label for="dragon">Dragon</label>
+        <input type="checkbox" id="dragon" value="dragon" (change)="onCheckboxChange($event)">
+    </div>
+</div>
+
+<!-- Affiche tous les pokémons, si on a rien tapé dans la searchbar et aucun filtre par type n'est cliqué -->
+<div *ngIf="searchbarInput =='' && checkboxValue == '' " class="homepageContainer">
+    <div class="cardMapped" *ngFor="let pokemon of pokemonList">
+        <app-pokemon-card [pokemon]="pokemon" [user]="user"></app-pokemon-card>
+    </div>
+</div>
+<!-- Affiche les pokémons filtrés par la searchbar -->
+<div class="homepageContainer" *ngIf="searchbarInput != '' ">
+    <div class="cardMapped" *ngFor="let pokemon of pokemonList | filter: searchbarInput">
+        <app-pokemon-card [pokemon]="pokemon" [user]="user"></app-pokemon-card>
+    </div>
+</div>
+
+<!-- Affiche les pokémons filtrés par les checkbox -->
+<div class="homepageContainer" *ngIf="checkboxValue != '' ">
+    <div class="cardMapped" *ngFor="let pokemon of pokemonList | checked: checkboxValue">
+        <app-pokemon-card [pokemon]="pokemon" [user]="user"></app-pokemon-card>
+    </div>
+</div>

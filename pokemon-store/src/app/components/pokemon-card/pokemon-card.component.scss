@@ -1,0 +1,67 @@
+.pokemonCard {
+  position: relative;
+  height: 40vh;
+  width: 20vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #006db554;
+  box-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.726);
+  //
+  margin: 3% 3% 0 3%;
+
+  .pokemonName {
+    margin: 1% 0 0 1%;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .divImageAndType {
+    display: flex;
+
+    img {
+      height: 50%;
+      width: 50%;
+    }
+
+    .divTypes {
+      width: 25%;
+
+      .type1,
+      .type2 {
+        margin-left: 10%;
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  .pokemonDescription {
+    margin-left: 5%;
+    font-size: 1.1em;
+    height: 25%;
+  }
+
+  .pokemonPrice {
+    position: absolute;
+    font-size: 2em;
+    bottom: -5%;
+    left: 3%;
+  }
+
+  .addToCartButton {
+    cursor: pointer;
+    position: absolute;
+    bottom: 4%;
+    right: 5%;
+    font-size: 1.2em;
+    border: 1px solid #006cb5;
+    border-radius: 10px;
+    padding: 1% 2%;
+    background-color: #47b4fd;
+  }
+}
+
+.pokemonCard:hover {
+  transform: scale(105%);
+  transition: 0.3s ease;
+}
