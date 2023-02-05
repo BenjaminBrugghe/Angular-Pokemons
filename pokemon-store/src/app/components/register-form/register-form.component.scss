@@ -1,0 +1,61 @@
+.registerFormContainer {
+  height: 60vh;
+  width: 40vw;
+  margin: 1% auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #47b4fd;
+
+  .registerForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .registerLabel {
+      margin-top: 1%;
+      font-size: 1.5em;
+    }
+
+    .registerDiv {
+      margin: 1% 0;
+
+      .registerInput {
+        margin-bottom: 1%;
+        height: 3vh;
+        font-size: 1.2em;
+      }
+
+      .errorSpan {
+        position: absolute;
+        margin-left: 0.5%;
+
+        p {
+          margin-top: -2%;
+        }
+      }
+
+      .errorSpanPassword {
+        @extend .errorSpan;
+        margin-top: 1%;
+      }
+    }
+
+    .registerButton {
+      cursor: pointer;
+      margin: 1% 0;
+      font-size: 1.3em;
+      padding: 1% 2%;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+
+    .registerBottomText {
+      font-size: 1.3em;
+
+      .loginNow {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
