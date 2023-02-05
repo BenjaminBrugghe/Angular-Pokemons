@@ -1,0 +1,100 @@
+<div class="registerFormContainer">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="registerForm">
+
+        <label class="registerLabel" for="firstName">Firstname : </label>
+        <div class="registerDiv">
+            <input class="registerInput" type="text" id="firstName" formControlName="firstName"
+                placeholder="Firstname" />
+            <span class="errorSpan" *ngIf="submitted && form['firstName'].invalid">
+                <!-- Pour afficher une erreur si le champ ne contient pas au moins 3 caractères -->
+                <span *ngIf="form['firstName'].hasError('minlength')">
+                    * Your firstname must contain at least 3 characters
+                </span>
+                <!-- Pour afficher une erreur si le champ est vide -->
+                <span *ngIf="!form['firstName'].value">
+                    * Your firstname is required
+                </span>
+            </span>
+        </div>
+
+        <label class="registerLabel" for="lastName">Lastname : </label>
+        <div class="registerDiv">
+            <input class="registerInput" type="text" id="lastName" formControlName="lastName" placeholder="Lastname" />
+            <span class="errorSpan" *ngIf="submitted && form['lastName'].invalid">
+                <!-- Pour afficher une erreur si le champ ne contient pas au moins 3 caractères -->
+                <span *ngIf="form['lastName'].hasError('minlength')">
+                    * Your lastname must contain at least 3 characters
+                </span>
+                <!-- Pour afficher une erreur si le champ est vide -->
+                <span *ngIf="!form['lastName'].value">
+                    * Your lastname is required
+                </span>
+            </span>
+        </div>
+
+        <label class="registerLabel" for="email">Email : </label>
+        <div class="registerDiv">
+            <input class="registerInput" type="email" id="email" formControlName="email" placeholder="Email" />
+            <span class="errorSpan" *ngIf="submitted && form['email'].invalid">
+                <!-- Pour afficher une erreur si le champ ne contient pas une adresse email au bon format -->
+                <span *ngIf="form['email'].hasError('email')">
+                    * Your email must be in the format of : 'Example@email.com'
+                </span>
+                <!-- Pour afficher une erreur si le champ est vide -->
+                <span *ngIf="!form['email'].value">
+                    * Your email is required
+                </span>
+            </span>
+        </div>
+
+        <label class="registerLabel" for="password">Password : </label>
+        <div class="registerDiv">
+            <input class="registerInput" type="password" id="password" formControlName="password"
+                placeholder="Password" />
+            <span class="errorSpan" *ngIf="submitted && form['password'].invalid">
+                <!-- Pour afficher une erreur si le champ ne contient pas au moins 6 caractères -->
+                <span *ngIf="form['password'].hasError('minlength')">
+                    * Your password must contain at least 6 characters
+                </span>
+                <!-- Pour afficher une erreur si le champ est vide -->
+                <span *ngIf="!form['password'].value">
+                    * Your password is required
+                </span>
+            </span>
+            <!-- Pour afficher une erreur si les deux mots de passe ne correspondent pas -->
+            <span class="errorSpanPassword" *ngIf="submitted">
+                <span *ngIf="form['password'].value != form['confirmPassword'].value">
+                    * Both password must match each other
+                </span>
+            </span>
+        </div>
+
+        <label class="registerLabel" for="confirmPassword">Confirm Password : </label>
+        <div class="registerDiv">
+            <input class="registerInput" type="password" id="confirmPassword" formControlName="confirmPassword"
+                placeholder="Confirm Password" />
+            <span class="errorSpan" *ngIf="submitted && form['confirmPassword'].invalid">
+                <!-- Pour afficher une erreur si le champ ne contient pas au moins 6 caractères -->
+                <span *ngIf="form['confirmPassword'].hasError('minlength')">
+                    * Confirmation of password must contain at least 6 characters
+                </span>
+                <!-- Pour afficher une erreur si le champ est vide -->
+                <span *ngIf="!form['confirmPassword'].value">
+                    * Confirmation of password is required
+                </span>
+            </span>
+            <!-- Pour afficher une erreur si les deux mots de passe ne correspondent pas -->
+            <span class="errorSpanPassword" *ngIf="submitted">
+                <span *ngIf="form['password'].value != form['confirmPassword'].value">
+                    * Both password must match each other
+                </span>
+            </span>
+        </div>
+
+        <!-- Ajouter [disabled]="userForm.invalid" pour désactiver le bouton si tous les champs ne sont pas valides -->
+        <button class="registerButton" type="submit">Register</button>
+
+        <p class="registerBottomText">Already a user ? <b class="loginNow" routerLink="/">Login now</b> !</p>
+
+    </form>
+</div>

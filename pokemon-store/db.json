@@ -1,4 +1,13 @@
 {
+  "users": [
+    {
+      "firstName": "Test",
+      "lastName": "Test",
+      "email": "Test@gmail.com",
+      "password": "azerty",
+      "id": 1
+    }
+  ],
   "pokemons": [
     {
       "id": 1,
