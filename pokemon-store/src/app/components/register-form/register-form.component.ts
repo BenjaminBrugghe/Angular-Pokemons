@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 import Users from 'src/app/models/Users';
 import { ApiServiceService } from 'src/app/services/api-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-form',
@@ -17,7 +18,7 @@ export class RegisterFormComponent {
     confirmPassword: ['', [Validators.required, Validators.minLength(6)]],
   });
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
 
   private _service: ApiServiceService = new ApiServiceService();
 
@@ -70,6 +71,8 @@ export class RegisterFormComponent {
       } else {
         const newUser: Users = this.createNewUser();
         this._service.createUser(newUser);
+        alert('Votre compte a bien été créé !');
+        this.router.navigate(['/']);
       }
 
       // ********************** Hasher le password
