@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import Users from '../models/Users';
+import Pokemons from '../models/Pokemons';
 
 @Injectable({
   providedIn: 'root',
@@ -9,6 +10,7 @@ export class ApiServiceService {
 
   // Devrait être dans un fichier .env
   private _URL_USERS = 'http://localhost:3000/users';
+  private _URL_POKEMONS = 'http://localhost:3000/pokemons';
 
   // ******************** USERS ********************
 
@@ -62,6 +64,19 @@ export class ApiServiceService {
     } catch (error) {
       return console.log(error);
     }
+  }
+
+  // ******************** POKEMONS ********************
+
+  // ********** GET **********
+
+  /**
+   * Récupère la liste des pokémons
+   * @returns La liste des pokémons
+   */
+  public async getAllPokemons(): Promise<Pokemons[]> {
+    const response = await fetch(this._URL_POKEMONS);
+    return await response.json();
   }
 
   // ******************** VERIFICATIONS ********************
