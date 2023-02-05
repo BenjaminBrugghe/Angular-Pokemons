@@ -8,6 +8,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
+import { FilterPipe } from '../assets/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     FooterComponent,
     RegisterFormComponent,
     LoginFormComponent,
+    HomepageComponent,
+    PokemonCardComponent,
+    FilterPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
