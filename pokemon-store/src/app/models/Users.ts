@@ -5,6 +5,7 @@ export default class Users {
   lastName: string;
   email: string;
   password: string;
+  cart: any[] = [];
 
   // Constructeur
   constructor(
