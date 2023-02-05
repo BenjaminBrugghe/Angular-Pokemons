@@ -11,6 +11,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { FilterPipe } from '../assets/filter.pipe';
+import { CheckboxPipe } from '../assets/checkbox.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FilterPipe } from '../assets/filter.pipe';
     HomepageComponent,
     PokemonCardComponent,
     FilterPipe,
+    CheckboxPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
