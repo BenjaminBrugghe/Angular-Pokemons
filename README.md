@@ -6,6 +6,11 @@
 
 #
 
+## Installer les dépendances
+```
+npm i
+```
+
 ## Démarrer le projet
 
 ```
