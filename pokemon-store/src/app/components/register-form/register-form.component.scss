@@ -1,6 +1,8 @@
 .registerFormContainer {
   height: 60vh;
+  min-height: 420px;
   width: 40vw;
+  min-width: 300px;
   margin: 1% auto;
   border: 1px solid black;
   border-radius: 10px;
@@ -22,6 +24,7 @@
       .registerInput {
         margin-bottom: 1%;
         height: 3vh;
+        min-height: 20px;
         font-size: 1.2em;
       }
 
