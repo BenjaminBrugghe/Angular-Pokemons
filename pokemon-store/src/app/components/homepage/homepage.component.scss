@@ -1,18 +1,25 @@
-.homepageInput {
-  height: 30px;
-  width: 30%;
-  margin: 0.4% 35%;
-  font-size: 1.2em;
-  border-radius: 10px;
-}
+.homepageSearchbar {
+  display: flex;
+  justify-content: center;
 
+  .homepageInput {
+    height: 30px;
+    width: 30%;
+    min-width: 300px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    align-content: center;
+  }
+}
 .filterByType {
-  height: 8vh;
-  width: 88vw;
+  height: 8%;
+  width: 88%;
   margin: 0 5vw 0 7vw;
 
   div {
     margin-bottom: 1%;
+    display: flex;
+    justify-content: space-between;
   }
 
   label {
@@ -23,7 +30,6 @@
     cursor: pointer;
     height: 20px;
     width: 20px;
-    margin-right: 7.3%;
   }
 }
 
@@ -40,5 +46,56 @@
   .cardMapped {
     display: flex;
     margin-right: 1%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .filterByType {
+    font-size: 0.8em;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .homepageInput {
+    margin: 0.4% 25%;
+  }
+
+  .filterByType {
+    width: 80%;
+    font-size: 0.7em;
+    margin: 0 0 5% 8%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .filterByType {
+    margin-bottom: 1%;
+    width: 50%;
+
+    div {
+      width: 90%;
+      margin-left: -10%;
+
+      span {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .filterByType {
+    width: 50%;
+
+    div {
+      flex-wrap: wrap;
+      width: 190%;
+      margin-left: -10%;
+    }
+  }
+
+  .cardMapped {
+    margin-left: 1%;
   }
 }
