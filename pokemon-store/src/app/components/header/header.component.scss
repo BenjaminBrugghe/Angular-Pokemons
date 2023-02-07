@@ -1,6 +1,9 @@
 .header {
   position: relative;
   height: 9vh;
+  min-height: 85px;
+  width: 100%;
+  min-width: 330px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,51 +15,111 @@
     font-weight: bold;
   }
 
-  .cartIcon {
-    cursor: pointer;
+  .headerIcons {
     position: absolute;
-    right: 12%;
-    font-size: 2.8em;
-    color: #ffaf01;
-  }
-  .cartIcon::after {
-    content: "MON PANIER"; // Ne fonctionne pas en minuscule
-    display: none;
-    font-size: 0.4em;
-    position: absolute;
-    right: -70%;
-  }
-  .cartIcon:hover::after {
-    display: block;
-  }
+    height: 100%;
+    width: 10%;
+    min-width: 180px;
+    right: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  .userIcon {
-    @extend .cartIcon;
-    right: 7%;
-  }
-  .userIcon::after {
-    content: "MON COMPTE"; // Ne fonctionne pas en minuscule
-    display: none;
-    font-size: 0.4em;
-    position: absolute;
-    right: -90%;
-  }
-  .userIcon:hover::after {
-    display: block;
-  }
+    .cartIcon {
+      cursor: pointer;
+      right: 12%;
+      font-size: 2.8em;
+      color: #ffaf01;
+    }
+    .cartIcon::after {
+      content: "MON PANIER"; // Ne fonctionne pas en minuscule
+      display: none;
+      font-size: 0.4em;
+      position: absolute;
+      right: 60%;
+    }
+    .cartIcon:hover::after {
+      display: block;
+    }
 
-  .logoutIcon {
-    @extend .cartIcon;
-    right: 2%;
+    .userIcon {
+      @extend .cartIcon;
+      right: 7%;
+    }
+    .userIcon::after {
+      content: "MON COMPTE"; // Ne fonctionne pas en minuscule
+      display: none;
+      font-size: 0.4em;
+      position: absolute;
+      right: 20%;
+    }
+    .userIcon:hover::after {
+      display: block;
+    }
+
+    .logoutIcon {
+      @extend .cartIcon;
+      right: 2%;
+    }
+    .logoutIcon::after {
+      content: "DECONNECTION"; // Ne fonctionne pas en minuscule
+      display: none;
+      font-size: 0.4em;
+      position: absolute;
+      right: -8%;
+    }
+    .logoutIcon:hover::after {
+      display: block;
+    }
   }
-  .logoutIcon::after {
-    content: "DECONNECTION"; // Ne fonctionne pas en minuscule
-    display: none;
-    font-size: 0.4em;
-    position: absolute;
-    right: -80%;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    min-height: 50px;
+
+    .headerParagraph {
+      font-size: 2em;
+    }
+
+    .headerIcons {
+      min-width: 130px;
+
+      .cartIcon {
+        font-size: 1.8em;
+      }
+    }
   }
-  .logoutIcon:hover::after {
-    display: block;
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    min-height: 50px;
+
+    .headerParagraph {
+      font-size: 1.3em;
+    }
+
+    .headerIcons {
+      min-width: 130px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .header {
+    min-height: 50px;
+
+    .headerParagraph {
+      width: 55%;
+    }
+
+    .headerIcons {
+      min-width: 90px;
+
+      .cartIcon {
+        font-size: 1.4em;
+      }
+    }
   }
 }
