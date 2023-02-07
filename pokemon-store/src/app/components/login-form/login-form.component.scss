@@ -1,6 +1,8 @@
 .loginFormContainer {
   height: 35vh;
+  min-height: 280px;
   width: 40vw;
+  min-width: 330px;
   margin: 1% auto;
   border: 1px solid black;
   border-radius: 10px;
@@ -22,6 +24,7 @@
       .loginInput {
         margin-bottom: 1%;
         height: 3vh;
+        min-height: 20px;
         font-size: 1.2em;
       }
 
