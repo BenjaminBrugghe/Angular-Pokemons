@@ -24,10 +24,30 @@ export class HomepageComponent {
    * Reset la valeur de l'input text de la searchbar.
    */
   public onCheckboxChange(event: any): void {
-    event.target.checked
-      ? (this.checkboxValue = event.target.value)
-      : (this.checkboxValue = '');
-    this.searchbarInput = '';
+    // Lorsqu'on coche une checkbox
+    if (event.target.checked) {
+      this.checkboxValue == '' // Si aucune checkbox n'est cochée, on récupère la value 1, sinon la value 2
+        ? (this.checkboxValue = event.target.value)
+        : (this.checkboxValue_2 = event.target.value);
+    } else {
+      // Lorsqu'on décoche une checkbox
+      // Si 2 checkbox sont cochées
+      if (this.checkboxValue_2 != '') {
+        if (event.target.value == this.checkboxValue) {
+          // Si la checkbox décochée est la première
+          this.checkboxValue = this.checkboxValue_2;
+          this.checkboxValue_2 = '';
+        } else {
+          // Si la checkbox décochée est la deuxième
+          this.checkboxValue_2 = '';
+        }
+      } else {
+        // Si 1 seule checkbox est cochée
+        this.checkboxValue = '';
+      }
+    }
+    // Reset la valeur de l'input text de la searchbar
+    this.resetSearchbarInput();
   }
 
   /**
@@ -35,6 +55,13 @@ export class HomepageComponent {
    */
   public resetCheckbox(): void {
     this.checkboxValue = '';
+  }
+
+  /**
+   * Reset la valeur de l'input text de la searchbar si on coche une checkbox.
+   */
+  public resetSearchbarInput(): void {
+    this.searchbarInput = '';
   }
 
   async ngOnInit(): Promise<void> {
