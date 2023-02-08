@@ -1,90 +1,107 @@
 <div class="homepageSearchbar">
     <input class="homepageInput" type="text" value={{searchbarInput}} [(ngModel)]="searchbarInput"
-        (change)="resetCheckbox()" placeholder="Rechercher un pokémon par nom...">
+        placeholder="Rechercher un pokémon par nom...">
 </div>
 
 <div class="filterByType">
     <div>
         <span>
             <label for="feu">Feu</label>
-            <input type="checkbox" id="feu" value="feu" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="feu" value="feu"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'feu') && (checkedCounter > 1 && checkboxValue_2 != 'feu') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="eau">Eau</label>
-            <input type="checkbox" id="eau" value="eau" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="eau" value="eau"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'eau') && (checkedCounter > 1 && checkboxValue_2 != 'eau') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="plante">Plante</label>
-            <input type="checkbox" id="plante" value="plante" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="plante" value="plante"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'plante') && (checkedCounter > 1 && checkboxValue_2 != 'plante') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="poison">Poison</label>
-            <input type="checkbox" id="poison" value="poison" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="poison" value="poison"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'poison') && (checkedCounter > 1 && checkboxValue_2 != 'poison') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="vol">Vol</label>
-            <input type="checkbox" id="vol" value="vol" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="vol" value="vol"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'vol') && (checkedCounter > 1 && checkboxValue_2 != 'vol') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="insecte">Insecte</label>
-            <input type="checkbox" id="insecte" value="insecte" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="insecte" value="insecte"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'insecte') && (checkedCounter > 1 && checkboxValue_2 != 'insecte') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="normal">Normal</label>
-            <input type="checkbox" id="normal" value="normal" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="normal" value="normal"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'normal') && (checkedCounter > 1 && checkboxValue_2 != 'normal') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="electrique">Electrique</label>
-            <input type="checkbox" id="electrique" value="electrique" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="electrique" value="electrique"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'electrique') && (checkedCounter > 1 && checkboxValue_2 != 'electrique') "
+                (change)="onCheckboxChange($event)">
         </span>
     </div>
-
     <div>
         <span>
             <label for="sol">Sol</label>
-            <input type="checkbox" id="sol" value="sol" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="sol" value="sol"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'sol') && (checkedCounter > 1 && checkboxValue_2 != 'sol') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="fée">Fée</label>
-            <input type="checkbox" id="fée" value="fée" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="fée" value="fée"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'fée') && (checkedCounter > 1 && checkboxValue_2 != 'fée') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="combat">Combat</label>
-            <input type="checkbox" id="combat" value="combat" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="combat" value="combat"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'combat') && (checkedCounter > 1 && checkboxValue_2 != 'combat') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="psy">Psy</label>
-            <input type="checkbox" id="psy" value="psy" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="psy" value="psy"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'psy') && (checkedCounter > 1 && checkboxValue_2 != 'psy') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="roche">Roche</label>
-            <input type="checkbox" id="roche" value="roche" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="roche" value="roche"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'roche') && (checkedCounter > 1 && checkboxValue_2 != 'roche') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="spectre">Spectre</label>
-            <input type="checkbox" id="spectre" value="spectre" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="spectre" value="spectre"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'spectre') && (checkedCounter > 1 && checkboxValue_2 != 'spectre') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="glace">Glace</label>
-            <input type="checkbox" id="glace" value="glace" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="glace" value="glace"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'glace') && (checkedCounter > 1 && checkboxValue_2 != 'glace') "
+                (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="dragon">Dragon</label>
-            <input type="checkbox" id="dragon" value="dragon" (change)="onCheckboxChange($event)">
+            <input type="checkbox" id="dragon" value="dragon"
+                [disabled]="(checkedCounter > 1 && checkboxValue != 'dragon') && (checkedCounter > 1 && checkboxValue_2 != 'dragon') "
+                (change)="onCheckboxChange($event)">
         </span>
     </div>
 </div>
@@ -104,7 +121,7 @@
 
 <!-- Affiche les pokémons filtrés par les checkbox -->
 <div class="homepageContainer" *ngIf="checkboxValue != '' ">
-    <div class="cardMapped" *ngFor="let pokemon of pokemonList | checked: checkboxValue">
+    <div class="cardMapped" *ngFor="let pokemon of pokemonList | checked: checkboxValue: checkboxValue_2">
         <app-pokemon-card [pokemon]="pokemon" [user]="user"></app-pokemon-card>
     </div>
 </div>
