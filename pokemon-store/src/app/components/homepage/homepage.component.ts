@@ -20,7 +20,11 @@ export class HomepageComponent {
   public checkboxValue: string = '';
   public checkboxValue_2: string = '';
 
+  // Pour Disable les autres checkbox lorsque 2 sont cliquées
   public checkedCounter: number = 0;
+
+  // Pour décocher les checkbox lorsqu'on écrit dans la searchbar
+  public checkbox: any;
 
   /**
    * Affiche les pokémons triés par type en fonction des checkbox cliquées.
@@ -70,10 +74,19 @@ export class HomepageComponent {
   }
 
   /**
-   * Reset la valeur de l'input checkbox si on écrit dans l'input text de la searchbar.
+   * Reset les valeurs et décoche les inputs checkbox et le counter si on écrit dans la searchbar.
    */
   public resetCheckbox(): void {
+    // Reset les valeurs et le counter
     this.checkboxValue = '';
+    this.checkboxValue_2 = '';
+    this.checkedCounter = 0;
+
+    // Décoche les checkbox
+    this.checkbox = document.querySelectorAll('input[type="checkbox"]');
+    this.checkbox.forEach((checkbox: any) => {
+      checkbox.checked = false;
+    });
   }
 
   /**
@@ -83,6 +96,9 @@ export class HomepageComponent {
     this.searchbarInput = '';
   }
 
+  /**
+   * Récupère l'utilisateur connecté via le localStorage et la liste des pokémons.
+   */
   async ngOnInit(): Promise<void> {
     // Récupère la liste des pokémons
     this.pokemonList = await this._service.getAllPokemons();
@@ -91,6 +107,15 @@ export class HomepageComponent {
     const id = localStorage.getItem('id');
     if (id) {
       this.user = await this._service.getUserById(+id);
+    }
+  }
+
+  /**
+   * Reset les checkbox si on écrit dans la searchbar.
+   */
+  ngDoCheck(): void {
+    if (this.searchbarInput != '') {
+      this.resetCheckbox();
     }
   }
 }
