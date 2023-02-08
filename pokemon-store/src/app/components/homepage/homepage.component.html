@@ -9,79 +9,64 @@
             <label for="feu">Feu</label>
             <input type="checkbox" id="feu" value="feu" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="eau">Eau</label>
             <input type="checkbox" id="eau" value="eau" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="plante">Plante</label>
             <input type="checkbox" id="plante" value="plante" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="poison">Poison</label>
             <input type="checkbox" id="poison" value="poison" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="vol">Vol</label>
             <input type="checkbox" id="vol" value="vol" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="insecte">Insecte</label>
             <input type="checkbox" id="insecte" value="insecte" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="normal">Normal</label>
             <input type="checkbox" id="normal" value="normal" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="electrique">Electrique</label>
             <input type="checkbox" id="electrique" value="electrique" (change)="onCheckboxChange($event)">
         </span>
     </div>
-
     <div>
         <span>
             <label for="sol">Sol</label>
             <input type="checkbox" id="sol" value="sol" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="fée">Fée</label>
             <input type="checkbox" id="fée" value="fée" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="combat">Combat</label>
             <input type="checkbox" id="combat" value="combat" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="psy">Psy</label>
             <input type="checkbox" id="psy" value="psy" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="roche">Roche</label>
             <input type="checkbox" id="roche" value="roche" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="spectre">Spectre</label>
             <input type="checkbox" id="spectre" value="spectre" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="glace">Glace</label>
             <input type="checkbox" id="glace" value="glace" (change)="onCheckboxChange($event)">
         </span>
-
         <span>
             <label for="dragon">Dragon</label>
             <input type="checkbox" id="dragon" value="dragon" (change)="onCheckboxChange($event)">
@@ -104,7 +89,7 @@
 
 <!-- Affiche les pokémons filtrés par les checkbox -->
 <div class="homepageContainer" *ngIf="checkboxValue != '' ">
-    <div class="cardMapped" *ngFor="let pokemon of pokemonList | checked: checkboxValue">
+    <div class="cardMapped" *ngFor="let pokemon of pokemonList | checked: checkboxValue: checkboxValue_2">
         <app-pokemon-card [pokemon]="pokemon" [user]="user"></app-pokemon-card>
     </div>
 </div>
