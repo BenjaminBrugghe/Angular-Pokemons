@@ -20,34 +20,48 @@ export class HomepageComponent {
   public checkboxValue_2: string = '';
 
   /**
-   * Affiche les pokémons triés par type en fonction de l'input qui a été cliqué.
+   * Affiche les pokémons triés par type en fonction des checkbox cliquées.
    * Reset la valeur de l'input text de la searchbar.
    */
   public onCheckboxChange(event: any): void {
     // Lorsqu'on coche une checkbox
     if (event.target.checked) {
-      this.checkboxValue == '' // Si aucune checkbox n'est cochée, on récupère la value 1, sinon la value 2
-        ? (this.checkboxValue = event.target.value)
-        : (this.checkboxValue_2 = event.target.value);
+      this.checkboxClicked(event);
     } else {
       // Lorsqu'on décoche une checkbox
-      // Si 2 checkbox sont cochées
-      if (this.checkboxValue_2 != '') {
-        if (event.target.value == this.checkboxValue) {
-          // Si la checkbox décochée est la première
-          this.checkboxValue = this.checkboxValue_2;
-          this.checkboxValue_2 = '';
-        } else {
-          // Si la checkbox décochée est la deuxième
-          this.checkboxValue_2 = '';
-        }
-      } else {
-        // Si 1 seule checkbox est cochée
-        this.checkboxValue = '';
-      }
+      this.checkboxUnclicked(event);
     }
     // Reset la valeur de l'input text de la searchbar
     this.resetSearchbarInput();
+  }
+
+  /**
+   * Si aucune checkbox n'est cochée, récupère la value 1, sinon la value 2
+   */
+  public checkboxClicked(event: any): void {
+    this.checkboxValue == ''
+      ? (this.checkboxValue = event.target.value)
+      : (this.checkboxValue_2 = event.target.value);
+  }
+
+  /**
+   * Met à jour les valeurs des checkbox en fonction de celle qui est décochée
+   */
+  public checkboxUnclicked(event: any): void {
+    if (this.checkboxValue_2 != '') {
+      // Si 2 checkbox sont cochées
+      if (event.target.value == this.checkboxValue) {
+        // Si la checkbox décochée est la première
+        this.checkboxValue = this.checkboxValue_2;
+        this.checkboxValue_2 = '';
+      } else {
+        // Si la checkbox décochée est la deuxième
+        this.checkboxValue_2 = '';
+      }
+    } else {
+      // Si 1 seule checkbox est cochée
+      this.checkboxValue = '';
+    }
   }
 
   /**
