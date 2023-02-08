@@ -18,5 +18,7 @@ export class PokemonCardComponent {
 
   public async addToCart(): Promise<void> {
     await this._service.addToCart(this.user.id, this.pokemon);
+    alert('Ce pokémon a bien été ajouté à votre panier !');
+    window.location.reload();
   }
 }
