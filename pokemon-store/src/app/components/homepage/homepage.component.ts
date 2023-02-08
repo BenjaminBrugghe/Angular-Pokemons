@@ -9,6 +9,7 @@ import Users from 'src/app/models/Users';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent {
+  constructor() {}
   private _service = new ApiServiceService();
 
   public pokemonList: Pokemons[] = [];
@@ -18,6 +19,8 @@ export class HomepageComponent {
 
   public checkboxValue: string = '';
   public checkboxValue_2: string = '';
+
+  public checkedCounter: number = 0;
 
   /**
    * Affiche les pokémons triés par type en fonction des checkbox cliquées.
@@ -42,6 +45,7 @@ export class HomepageComponent {
     this.checkboxValue == ''
       ? (this.checkboxValue = event.target.value)
       : (this.checkboxValue_2 = event.target.value);
+    this.checkedCounter++;
   }
 
   /**
@@ -62,6 +66,7 @@ export class HomepageComponent {
       // Si 1 seule checkbox est cochée
       this.checkboxValue = '';
     }
+    this.checkedCounter--;
   }
 
   /**
