@@ -156,9 +156,8 @@ export class ApiServiceService {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + token,
+        Authorization: token,
       },
-      body: JSON.stringify({ token }),
     })
       .then((response) => response.json())
       .catch((error) => console.log(error));
