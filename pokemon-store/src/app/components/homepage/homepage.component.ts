@@ -103,10 +103,10 @@ export class HomepageComponent {
     // Récupère la liste des pokémons
     this.pokemonList = await this._service.getAllPokemons();
 
-    // Récupère l'utilisateur connecté via le localStorage
-    const id = localStorage.getItem('id');
-    if (id) {
-      this.user = await this._service.getUserById(+id);
+    // Récupère l'utilisateur connecté via le token du localStorage
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.user = await this._service.verifyToken(token);
     }
   }
 
