@@ -33,9 +33,10 @@ export class LoginFormComponent {
     // Si le formulaire est valide
     if (this.userForm.valid) {
       // Vérifie si l'email de l'utilisateur existe déjà dans la BDD
-      const userExist: boolean = await this._service.checkEmailAlreadyExists(
-        this.userForm.value.email
-      );
+      // const userExist: boolean = await this._service.checkEmailAlreadyExists(
+      //   this.userForm.value.email
+      // );
+      const userExist: boolean = true;
       // Si il existe, récupère l'utilisateur et vérifie si le mot de passe est correct
       if (userExist) {
         const userFound: Users = await this._service.getUserByEmail(
@@ -45,10 +46,16 @@ export class LoginFormComponent {
         if (userFound.password === this.userForm.value.password) {
           //
           // ********************** Créer un JWT
+          const newToken = await this._service.createToken(userFound);
+          console.log('userFound : ', userFound); // *************************** A SUPPRIMER
+          console.log('newToken : ', newToken); // *************************** A SUPPRIMER
           //
           // ********************** Stocker ici le JWT au lieu de l'id
           //
           localStorage.setItem('id', userFound.id.toString());
+          localStorage.setItem('token', newToken);
+          console.log('localStorage-TOKEN : ', localStorage.getItem('token')); // *************************** A SUPPRIMER
+          console.log('localStorage-ID : ', localStorage.getItem('id')); // *************************** A SUPPRIMER
           alert('Vous êtes connecté !');
           this.router.navigate(['/homePage']);
         } else {

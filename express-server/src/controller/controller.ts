@@ -14,30 +14,30 @@ export default class Controller {
   /**
    * Appelle la méthode getAllUsers() du service
    */
-  public getAllUsers(res: Response): void {
+  public getAllUsers = (req: Request, res: Response): void => {
     res.send(this._service.getAllUsers());
-  }
+  };
 
   /**
    * Appelle la méthode getUserById() du service
    */
-  public getUserById(req: Request, res: Response): void {
+  public getUserById = (req: Request, res: Response): void => {
     const id: string = req.params.id;
     res.send(this._service.getUserById(+id));
-  }
+  };
 
   /**
    * Appelle la méthode getUserByEmail() du service
    */
-  public getUserByEmail(req: Request, res: Response): void {
+  public getUserByEmail = (req: Request, res: Response): void => {
     const email: string = req.params.email;
     res.send(this._service.getUserByEmail(email));
-  }
+  };
 
   /**
    * Récupère les données du body et appelle la méthode createUser() du service
    */
-  public createUser(req: Request, res: Response): void {
+  public createUser = (req: Request, res: Response): void => {
     const firstname: string = req.body.firstname;
     const lastname: string = req.body.lastname;
     const email: string = req.body.email;
@@ -49,12 +49,12 @@ export default class Controller {
       password
     );
     res.send(newUser);
-  }
+  };
 
   /**
    * Récupère les données du body et appelle la méthode updateUser() du service
    */
-  public updateUser(req: Request, res: Response): void {
+  public updateUser = (req: Request, res: Response): void => {
     const id: string = req.params.id;
     const firstname: string = req.body.firstname;
     const lastname: string = req.body.lastname;
@@ -68,23 +68,24 @@ export default class Controller {
       password
     );
     res.send(updatedUser);
-  }
+  };
 
   // ********************* POKEMONS *********************
 
   /**
    * Appelle la méthode getAllPokemons() du service
    */
-  public getAllPokemons(res: Response): void {
+  public getAllPokemons = (req: Request, res: Response): void => {
     res.send(this._service.getAllPokemons());
-  }
+  };
 
   // ********************* TOKENS *********************
 
   /**
    * Récupère les données du body et appelle la méthode createToken() du service
    */
-  public async createToken(req: Request, res: Response): Promise<void> {
+  public createToken = async (req: Request, res: Response): Promise<void> => {
+    console.log("********** Controller  **********"); // **********************************
     const email: string = req.body.email;
     const password: string = req.body.password;
     try {
@@ -93,12 +94,12 @@ export default class Controller {
     } catch (error) {
       res.send(error);
     }
-  }
+  };
 
   /**
    * Récupère le token dans l'authorization du headers et appelle la méthode verifyToken() du service
    */
-  public async verifyToken(req: Request, res: Response): Promise<void> {
+  public verifyToken = async (req: Request, res: Response): Promise<void> => {
     const token = req.headers.authorization!;
     try {
       const result = await this._service.verifyToken(token);
@@ -106,5 +107,5 @@ export default class Controller {
     } catch (error) {
       res.send(error);
     }
-  }
+  };
 }
