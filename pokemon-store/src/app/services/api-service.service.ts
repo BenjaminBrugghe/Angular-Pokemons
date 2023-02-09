@@ -132,8 +132,7 @@ export class ApiServiceService {
 
   // ******************** TOKEN ********************
 
-  public createToken = async (user: any) => {
-    console.log('********** api-service  **********'); // **********************************
+  public createToken = async (user: any): Promise<any> => {
     const response = await fetch(this._URL_CREATE_TOKEN, {
       method: 'POST',
       headers: {
@@ -141,7 +140,13 @@ export class ApiServiceService {
       },
       body: JSON.stringify(user),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          return response.json().then((error) => Promise.reject(error));
+        }
+      })
       .catch((error) => console.log(error));
     return response;
   };
