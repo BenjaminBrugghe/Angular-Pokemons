@@ -9,7 +9,7 @@ export class HeaderComponent {
   public userIsLogged: boolean = false;
 
   ngDoCheck(): void {
-    if (localStorage.getItem('id')) {
+    if (localStorage.getItem('token')) {
       this.userIsLogged = true;
     } else {
       this.userIsLogged = false;
@@ -17,6 +17,6 @@ export class HeaderComponent {
   }
 
   logout() {
-    localStorage.removeItem('id'); // A remplacer par 'token' une fois implémenté
+    localStorage.removeItem('token'); // A remplacer par 'token' une fois implémenté
   }
 }
