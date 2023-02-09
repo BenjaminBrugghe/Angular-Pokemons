@@ -8,9 +8,11 @@ import Pokemons from '../models/Pokemons';
 export class ApiServiceService {
   constructor() {}
 
-  // Devrait être dans un fichier .env
-  private _URL_USERS = 'http://localhost:3000/users';
-  private _URL_POKEMONS = 'http://localhost:3000/pokemons';
+  // Devrait provenir d'un fichier .env
+  private _URL_USERS = 'http://localhost:3001/users';
+  private _URL_POKEMONS = 'http://localhost:3001/pokemons';
+  private _URL_CREATE_TOKEN = 'http://localhost:3001/createToken';
+  private _URL_VERIFY_TOKEN = 'http://localhost:3001/verifyToken';
 
   // ******************** USERS ********************
 
@@ -126,5 +128,34 @@ export class ApiServiceService {
     } catch (error) {
       return console.log(error);
     }
+  }
+
+  // ******************** TOKEN ********************
+
+  public async createToken(user: Users) {
+    const response = await fetch(this._URL_CREATE_TOKEN, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+    return response;
+  }
+
+  public async verifyToken(token: string) {
+    const response = await fetch(this._URL_VERIFY_TOKEN, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+      },
+      body: JSON.stringify({ token }),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+    return response;
   }
 }

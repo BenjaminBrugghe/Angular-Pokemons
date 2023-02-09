@@ -1,0 +1,1512 @@
+[
+  {
+    "id": 1,
+    "name": "Bulbizarre",
+    "type1": "Plante",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Bulbizarre est un Pokémon de type Plante et Poison. Il est l'un des Pokémon de départ de la région de Kanto et évolue en Herbizarre.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+  },
+  {
+    "id": 2,
+    "name": "Herbizarre",
+    "type1": "Plante",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Herbizarre est un Pokémon de type Plante et Poison. Il est l'évolution de Bulbizarre et évolue en Florizarre.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
+  },
+  {
+    "id": 3,
+    "name": "Florizarre",
+    "type1": "Plante",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Florizarre est un Pokémon de type Plante et Poison. Il est l'évolution de Herbizarre.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
+  },
+  {
+    "id": 4,
+    "name": "Salamèche",
+    "type1": "Feu",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Salamèche est un Pokémon de type Feu. Il est l'un des Pokémon de départ de la région de Kanto et évolue en Reptincel.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+  },
+  {
+    "id": 5,
+    "name": "Reptincel",
+    "type1": "Feu",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Reptincel est un Pokémon de type Feu. Il est l'évolution de Salamèche et évolue en Dracaufeu.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+  },
+  {
+    "id": 6,
+    "name": "Dracaufeu",
+    "type1": "Feu",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Dracaufeu est un Pokémon de type Feu et Vol. Il est l'évolution de Reptincel.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+  },
+  {
+    "id": 7,
+    "name": "Carapuce",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Carapuce est un Pokémon de type Eau. Il est l'un des Pokémon de départ de la région de Kanto et évolue en Carabaffe.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+  },
+  {
+    "id": 8,
+    "name": "Carabaffe",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Carabaffe est un Pokémon de type Eau. Il est l'évolution de Carapuce et évolue en Tortank.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png"
+  },
+  {
+    "id": 9,
+    "name": "Tortank",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Tortank est un Pokémon de type Eau. Il est l'évolution de Carabaffe.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+  },
+  {
+    "id": 10,
+    "name": "Chenipan",
+    "type1": "Insecte",
+    "type2": "",
+    "evolution": true,
+    "price": 9.99,
+    "description": "Chenipan est un Pokémon de type Insecte. Il se trouve dans la région de Kanto et évolue en Chrysacier.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 11,
+    "name": "Chrysacier",
+    "type1": "Insecte",
+    "type2": "",
+    "evolution": true,
+    "price": 14.99,
+    "description": "Chrysacier est un Pokémon de type Insecte. Il est l'évolution de Chenipan et évolue en Papilusion.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png"
+  },
+  {
+    "id": 12,
+    "name": "Papilusion",
+    "type1": "Insecte",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 29.99,
+    "description": "Papilusion est un Pokémon de type Insecte et Vol. Il est l'évolution de Chrysacier.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+  },
+  {
+    "id": 13,
+    "name": "Aspicot",
+    "type1": "Insecte",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 9.99,
+    "description": "Aspicot est un Pokémon de type Insecte et Poison. Il se trouve dans la région de Kanto et évolue en Coconfort.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png"
+  },
+  {
+    "id": 14,
+    "name": "Coconfort",
+    "type1": "Insecte",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 14.99,
+    "description": "Coconfort est un Pokémon de type Insecte et Poison. Il est l'évolution d'Aspicot et évolue en Dardargnan.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png"
+  },
+  {
+    "id": 15,
+    "name": "Dardargnan",
+    "type1": "Insecte",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 29.99,
+    "description": "Dardargnan est un Pokémon de type Insecte et Poison. Il est l'évolution de Coconfort.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png"
+  },
+  {
+    "id": 16,
+    "name": "Roucool",
+    "type1": "Normal",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 12.99,
+    "description": "Roucool est un Pokémon de type Normal et Vol. Il se trouve dans la région de Kanto et évolue en Roucoups.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 17,
+    "name": "Roucoups",
+    "type1": "Normal",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Roucoups est un Pokémon de type Normal et Vol. Il est l'évolution de Roucool et évolue en Roucarnage.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png"
+  },
+  {
+    "id": 18,
+    "name": "Roucarnage",
+    "type1": "Normal",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 31.99,
+    "description": "Roucarnage est un Pokémon de type Normal et Vol. Il est l'évolution de Roucoups.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png"
+  },
+  {
+    "id": 19,
+    "name": "Rattata",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": true,
+    "price": 11.99,
+    "description": "Rattata est un Pokémon de type Normal. Il se trouve dans la région de Kanto et évolue en Rattatac.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 20,
+    "name": "Rattatac",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": true,
+    "price": 19.99,
+    "description": "Rattatac est un Pokémon de type Normal. Il est l'évolution de Rattata.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png"
+  },
+  {
+    "id": 21,
+    "name": "Piafabec",
+    "type1": "Normal",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 12.99,
+    "description": "Piafabec est un Pokémon de type Normal et Vol. Il se trouve dans la région de Kanto et évolue en Rapasdepic.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png"
+  },
+  {
+    "id": 22,
+    "name": "Rapasdepic",
+    "type1": "Normal",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 21.99,
+    "description": "Rapasdepic est un Pokémon de type Normal et Vol. Il est l'évolution de Piafabec.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/022.png"
+  },
+  {
+    "id": 23,
+    "name": "Abo",
+    "type1": "Poison",
+    "type2": "",
+    "evolution": true,
+    "price": 14.99,
+    "description": "Abo est un Pokémon de type Poison. Il se trouve dans la région de Kanto et évolue en Arbok.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png"
+  },
+  {
+    "id": 24,
+    "name": "Arbok",
+    "type1": "Poison",
+    "type2": "",
+    "evolution": true,
+    "price": 28.99,
+    "description": "Arbok est un Pokémon de type Poison. Il est l'évolution d'Abo.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png"
+  },
+  {
+    "id": 25,
+    "name": "Pikachu",
+    "type1": "Electrique",
+    "type2": "",
+    "evolution": true,
+    "price": 15.99,
+    "description": "Pikachu est un Pokémon de type Electrique. Il se trouve dans la région de Kanto et évolue en Raichu.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+  },
+  {
+    "id": 26,
+    "name": "Raichu",
+    "type1": "Electrique",
+    "type2": "",
+    "evolution": true,
+    "price": 28.99,
+    "description": "Raichu est un Pokémon de type Electrique. Il est l'évolution de Pikachu.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png"
+  },
+  {
+    "id": 27,
+    "name": "Sabelette",
+    "type1": "Sol",
+    "type2": "",
+    "evolution": true,
+    "price": 14.99,
+    "description": "Sabelette est un Pokémon de type Sol. Il se trouve dans la région de Kanto et évolue en Sablaireau.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png"
+  },
+  {
+    "id": 28,
+    "name": "Sablaireau",
+    "type1": "Sol",
+    "type2": "",
+    "evolution": true,
+    "price": 18.99,
+    "description": "Sablaireau est un Pokémon de type Sol. Il est l'évolution de Sabelette.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/028.png"
+  },
+  {
+    "id": 29,
+    "name": "Nidoran",
+    "type1": "Poison",
+    "type2": "",
+    "evolution": true,
+    "price": 14.99,
+    "description": "Nidoran est un Pokémon de type Poison. Il se trouve dans la région de Kanto et évolue en Nidorina.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/029.png"
+  },
+  {
+    "id": 30,
+    "name": "Nidorina",
+    "type1": "Poison",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Nidorina est un Pokémon de type Poison. Il est l'évolution de Nidoran.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/030.png"
+  },
+  {
+    "id": 31,
+    "name": "Nidoqueen",
+    "type1": "Poison",
+    "type2": "Sol",
+    "evolution": true,
+    "price": 31.99,
+    "description": "Nidoqueen est un Pokémon de type Poison et Sol. Il est l'évolution de Nidorina.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png"
+  },
+  {
+    "id": 32,
+    "name": "Nidoran",
+    "type1": "Poison",
+    "type2": "",
+    "evolution": true,
+    "price": 14.99,
+    "description": "Nidoran est un Pokémon de type Poison. Il se trouve dans la région de Kanto et évolue en Nidorino.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/032.png"
+  },
+  {
+    "id": 33,
+    "name": "Nidorino",
+    "type1": "Poison",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Nidorino est un Pokémon de type Poison. Il est l'évolution de Nidoran.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/033.png"
+  },
+  {
+    "id": 34,
+    "name": "Nidoking",
+    "type1": "Poison",
+    "type2": "Sol",
+    "evolution": true,
+    "price": 31.99,
+    "description": "Nidoking est un Pokémon de type Poison et Sol. Il est l'évolution de Nidorino.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/034.png"
+  },
+  {
+    "id": 35,
+    "name": "Mélofée",
+    "type1": "Fée",
+    "type2": "",
+    "evolution": true,
+    "price": 21.99,
+    "description": "Mélofée est un Pokémon de type Fée. Il se trouve dans la région de Kanto et évolue en Melodelfe.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png"
+  },
+  {
+    "id": 36,
+    "name": "Melodelfe",
+    "type1": "Fée",
+    "type2": "",
+    "evolution": true,
+    "price": 34.99,
+    "description": "Melodelfe est un Pokémon de type Fée. Il est l'évolution de Mélofée.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/036.png"
+  },
+  {
+    "id": 37,
+    "name": "Goupix",
+    "type1": "Feu",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Goupix est un Pokémon de type Feu. Il se trouve dans la région de Kanto et évolue en Feunard.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png"
+  },
+  {
+    "id": 38,
+    "name": "Feunard",
+    "type1": "Feu",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Feunard est un Pokémon de type Feu. Il est l'évolution de Goupix.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/038.png"
+  },
+  {
+    "id": 39,
+    "name": "Rondoudou",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": true,
+    "price": 27.99,
+    "description": "Rondoudou est un Pokémon de type Normal. Il se trouve dans la région de Kanto et évolue en Grodoudou.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png"
+  },
+  {
+    "id": 40,
+    "name": "Grodoudou",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": true,
+    "price": 38.99,
+    "description": "Grodoudou est un Pokémon de type Normal. Il est l'évolution de Rondoudou.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/040.png"
+  },
+  {
+    "id": 41,
+    "name": "Nosferapti",
+    "type1": "Poison",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 19.99,
+    "description": "Nosferapti est un Pokémon de type Poison et Vol. Il se trouve dans la région de Kanto et évolue en Nosferalto.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 42,
+    "name": "Nosferalto",
+    "type1": "Poison",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 32.99,
+    "description": "Nosferalto est un Pokémon de type Poison et Vol. Il est l'évolution de Nosferapti.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/042.png"
+  },
+  {
+    "id": 43,
+    "name": "Mystherbe",
+    "type1": "Plante",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Mystherbe est un Pokémon de type Plante et Poison. Il se trouve dans la région de Kanto et évolue en Ortide.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/043.png"
+  },
+  {
+    "id": 44,
+    "name": "Ortide",
+    "type1": "Plante",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 33.99,
+    "description": "Ortide est un Pokémon de type Plante et Poison. Il est l'évolution de Mystherbe.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png"
+  },
+  {
+    "id": 45,
+    "name": "Rafflesia",
+    "type1": "Plante",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 42.99,
+    "description": "Rafflesia est un Pokémon de type Plante et Poison. Il est l'évolution de Ortide.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/045.png"
+  },
+  {
+    "id": 46,
+    "name": "Paras",
+    "type1": "Insecte",
+    "type2": "Plante",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Paras est un Pokémon de type Insecte et Plante. Il se trouve dans la région de Kanto et évolue en Parasect.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png"
+  },
+  {
+    "id": 47,
+    "name": "Parasect",
+    "type1": "Insecte",
+    "type2": "Plante",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Parasect est un Pokémon de type Insecte et Plante. Il est l'évolution de Paras.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/047.png"
+  },
+  {
+    "id": 48,
+    "name": "Mimitoss",
+    "type1": "Insecte",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Mimitoss est un Pokémon de type Insecte et Poison. Il se trouve dans la région de Kanto et évolue en Aéromite.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/048.png"
+  },
+  {
+    "id": 49,
+    "name": "Aéromite",
+    "type1": "Insecte",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Aéromite est un Pokémon de type Insecte et Poison. Il est l'évolution de Mimitoss.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/049.png"
+  },
+  {
+    "id": 50,
+    "name": "Taupiqueur",
+    "type1": "Sol",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Taupiqueur est un Pokémon de type Sol. Il se trouve dans la région de Kanto et évolue en Triopikeur.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/050.png"
+  },
+  {
+    "id": 51,
+    "name": "Triopikeur",
+    "type1": "Sol",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Triopikeur est un Pokémon de type Sol. Il est l'évolution de Taupiqueur.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/051.png"
+  },
+  {
+    "id": 52,
+    "name": "Miaouss",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Miaouss est un Pokémon de type Normal. Il se trouve dans la région de Kanto et évolue en Persian.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png"
+  },
+  {
+    "id": 53,
+    "name": "Persian",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Persian est un Pokémon de type Normal. Il est l'évolution de Miaouss.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/053.png"
+  },
+  {
+    "id": 54,
+    "name": "Psykokwak",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Psykokwak est un Pokémon de type Eau. Il se trouve dans la région de Kanto et évolue en Akwakwak.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 55,
+    "name": "Akwakwak",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Akwakwak est un Pokémon de type Eau. Il est l'évolution de Psykokwak.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/055.png"
+  },
+  {
+    "id": 56,
+    "name": "Férosinge",
+    "type1": "Combat",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Férosinge est un Pokémon de type Combat. Il se trouve dans la région de Kanto et évolue en Colossinge.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/056.png"
+  },
+  {
+    "id": 57,
+    "name": "Colossinge",
+    "type1": "Combat",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Colossinge est un Pokémon de type Combat. Il est l'évolution de Férosinge.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/057.png"
+  },
+  {
+    "id": 58,
+    "name": "Caninos",
+    "type1": "Feu",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Caninos est un Pokémon de type Feu. Il se trouve dans la région de Kanto et évolue en Arcanin.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png"
+  },
+  {
+    "id": 59,
+    "name": "Arcanin",
+    "type1": "Feu",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Arcanin est un Pokémon de type Feu. Il est l'évolution de Caninos.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/059.png"
+  },
+  {
+    "id": 60,
+    "name": "Ptitard",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 21.99,
+    "description": "Ptitard est un Pokémon de type Eau. Il se trouve dans la région de Kanto et évolue en Têtarte.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png"
+  },
+  {
+    "id": 61,
+    "name": "Têtarte",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 33.99,
+    "description": "Têtarte est un Pokémon de type Eau. Il est l'évolution de Ptitard.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/061.png"
+  },
+  {
+    "id": 62,
+    "name": "Tartard",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 44.99,
+    "description": "Tartard est un Pokémon de type Eau. Il est l'évolution de Têtarte.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/062.png"
+  },
+  {
+    "id": 63,
+    "name": "Abra",
+    "type1": "Psy",
+    "type2": "",
+    "evolution": true,
+    "price": 28.99,
+    "description": "Abra est un Pokémon de type Psy. Il se trouve dans la région de Kanto et évolue en Kadabra.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png"
+  },
+  {
+    "id": 64,
+    "name": "Kadabra",
+    "type1": "Psy",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Kadabra est un Pokémon de type Psy. Il est l'évolution d'Abra.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/064.png"
+  },
+  {
+    "id": 65,
+    "name": "Alakazam",
+    "type1": "Psy",
+    "type2": "",
+    "evolution": true,
+    "price": 52.99,
+    "description": "Alakazam est un Pokémon de type Psy. Il est l'évolution de Kadabra.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/065.png"
+  },
+  {
+    "id": 66,
+    "name": "Machoc",
+    "type1": "Combat",
+    "type2": "",
+    "evolution": true,
+    "price": 21.99,
+    "description": "Machoc est un Pokémon de type Combat. Il se trouve dans la région de Kanto et évolue en Machopeur.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png"
+  },
+  {
+    "id": 67,
+    "name": "Machopeur",
+    "type1": "Combat",
+    "type2": "",
+    "evolution": true,
+    "price": 33.99,
+    "description": "Machopeur est un Pokémon de type Combat. Il est l'évolution de Machoc.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/067.png"
+  },
+  {
+    "id": 68,
+    "name": "Mackogneur",
+    "type1": "Combat",
+    "type2": "",
+    "evolution": true,
+    "price": 49.99,
+    "description": "Mackogneur est un Pokémon de type Combat. Il est l'évolution de Machopeur.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/068.png"
+  },
+  {
+    "id": 69,
+    "name": "Chétiflor",
+    "type1": "Plante",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 19.99,
+    "description": "Chétiflor est un Pokémon de type Plante et Poison. Il se trouve dans la région de Kanto et évolue en Boustiflor.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/069.png"
+  },
+  {
+    "id": 70,
+    "name": "Boustiflor",
+    "type1": "Plante",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Boustiflor est un Pokémon de type Plante et Poison. Il est l'évolution de Chétiflor.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/070.png"
+  },
+  {
+    "id": 71,
+    "name": "Empiflor",
+    "type1": "Plante",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Empiflor est un Pokémon de type Plante et Poison. Il est l'évolution de Boustiflor.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/071.png"
+  },
+  {
+    "id": 72,
+    "name": "Tentacool",
+    "type1": "Eau",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 19.99,
+    "description": "Tentacool est un Pokémon de type Eau et Poison. Il se trouve dans la région de Kanto et évolue en Tentacruel.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 73,
+    "name": "Tentacruel",
+    "type1": "Eau",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Tentacruel est un Pokémon de type Eau et Poison. Il est l'évolution de Tentacool.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/073.png"
+  },
+  {
+    "id": 74,
+    "name": "Racaillou",
+    "type1": "Roche",
+    "type2": "Sol",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Racaillou est un Pokémon de type Roche et Sol. Il se trouve dans la région de Kanto et évolue en Gravalanch.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png"
+  },
+  {
+    "id": 75,
+    "name": "Gravalanch",
+    "type1": "Roche",
+    "type2": "Sol",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Gravalanch est un Pokémon de type Roche et Sol. Il est l'évolution de Racaillou.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/075.png"
+  },
+  {
+    "id": 76,
+    "name": "Grolem",
+    "type1": "Roche",
+    "type2": "Sol",
+    "evolution": true,
+    "price": 34.99,
+    "description": "Grolem est un Pokémon de type Roche et Sol. Il est l'évolution de Gravalanch.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/076.png"
+  },
+  {
+    "id": 77,
+    "name": "Ponyta",
+    "type1": "Feu",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Ponyta est un Pokémon de type Feu. Il se trouve dans la région de Kanto et évolue en Galopa.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png"
+  },
+  {
+    "id": 78,
+    "name": "Galopa",
+    "type1": "Feu",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Galopa est un Pokémon de type Feu. Il est l'évolution de Ponyta.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/078.png"
+  },
+  {
+    "id": 79,
+    "name": "Ramoloss",
+    "type1": "Psy",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Ramoloss est un Pokémon de type Psy. Il se trouve dans la région de Kanto et évolue en Flagadoss.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/079.png"
+  },
+  {
+    "id": 80,
+    "name": "Flagadoss",
+    "type1": "Psy",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Flagadoss est un Pokémon de type Psy. Il est l'évolution de Ramoloss.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/080.png"
+  },
+  {
+    "id": 81,
+    "name": "Magnéti",
+    "type1": "Electrique",
+    "type2": "",
+    "evolution": true,
+    "price": 23.99,
+    "description": "Magnéti est un Pokémon de type Electrique. Il se trouve dans la région de Kanto et évolue en Magnéton.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png"
+  },
+  {
+    "id": 82,
+    "name": "Magnéton",
+    "type1": "Electrique",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Magnéton est un Pokémon de type Electrique. Il est l'évolution de Magnéti.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/082.png"
+  },
+  {
+    "id": 83,
+    "name": "Canarticho",
+    "type1": "Normal",
+    "type2": "Vol",
+    "evolution": false,
+    "price": 28.99,
+    "description": "Canarticho est un Pokémon de type Normal et Vol. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/083.png"
+  },
+  {
+    "id": 84,
+    "name": "Doduo",
+    "type1": "Normal",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 22.99,
+    "description": "Doduo est un Pokémon de type Normal et Vol. Il se trouve dans la région de Kanto et évolue en Dodrio.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/084.png"
+  },
+  {
+    "id": 85,
+    "name": "Dodrio",
+    "type1": "Normal",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 35.99,
+    "description": "Dodrio est un Pokémon de type Normal et Vol. Il est l'évolution de Doduo.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/085.png"
+  },
+  {
+    "id": 86,
+    "name": "Otaria",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Otaria est un Pokémon de type Eau. Il se trouve dans la région de Kanto et évolue en Lamantine.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/086.png"
+  },
+  {
+    "id": 87,
+    "name": "Lamantine",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Lamantine est un Pokémon de type Eau. Il est l'évolution d'Otaria.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/087.png"
+  },
+  {
+    "id": 88,
+    "name": "Tadmorv",
+    "type1": "Poison",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Tadmorv est un Pokémon de type Poison. Il se trouve dans la région de Kanto et évolue en Grotadmorv.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/088.png"
+  },
+  {
+    "id": 89,
+    "name": "Grotadmorv",
+    "type1": "Poison",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Grotadmorv est un Pokémon de type Poison. Il est l'évolution de Tadmorv.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/089.png"
+  },
+  {
+    "id": 90,
+    "name": "Kokiyas",
+    "type1": "Eau",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Kokiyas est un Pokémon de type Eau et Poison. Il se trouve dans la région de Kanto et évolue en Crustabri.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/090.png"
+  },
+  {
+    "id": 91,
+    "name": "Crustabri",
+    "type1": "Eau",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Crustabri est un Pokémon de type Eau et Poison. Il est l'évolution de Kokiyas.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/091.png"
+  },
+  {
+    "id": 92,
+    "name": "Fantominus",
+    "type1": "Spectre",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Fantominus est un Pokémon de type Spectre et Poison. Il se trouve dans la région de Kanto et évolue en Spectrum.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png"
+  },
+  {
+    "id": 93,
+    "name": "Spectrum",
+    "type1": "Spectre",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Spectrum est un Pokémon de type Spectre et Poison. Il est l'évolution de Fantominus.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/093.png"
+  },
+  {
+    "id": 94,
+    "name": "Ectoplasma",
+    "type1": "Spectre",
+    "type2": "Poison",
+    "evolution": true,
+    "price": 74.99,
+    "description": "Ectoplasma est un Pokémon de type Spectre et Poison. Il se trouve dans la région de Kanto et évolue en Onix.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/094.png"
+  },
+  {
+    "id": 95,
+    "name": "Onix",
+    "type1": "Roche",
+    "type2": "Sol",
+    "evolution": false,
+    "price": 62.99,
+    "description": "Onix est un Pokémon de type Roche et Sol. Il n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/095.png"
+  },
+  {
+    "id": 96,
+    "name": "Soporifik",
+    "type1": "Psy",
+    "type2": "",
+    "evolution": true,
+    "price": 29.99,
+    "description": "Soporifik est un Pokémon de type Psy. Il se trouve dans la région de Kanto et évolue en Hypnomade.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/096.png"
+  },
+  {
+    "id": 97,
+    "name": "Hypnomade",
+    "type1": "Psy",
+    "type2": "",
+    "evolution": true,
+    "price": 45.99,
+    "description": "Hypnomade est un Pokémon de type Psy. Il est l'évolution de Soporifik.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/097.png"
+  },
+  {
+    "id": 98,
+    "name": "Krabby",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Krabby est un Pokémon de type Eau. Il se trouve dans la région de Kanto et évolue en Krabboss.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/098.png"
+  },
+  {
+    "id": 99,
+    "name": "Krabboss",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Krabboss est un Pokémon de type Eau. Il est l'évolution de Krabby.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/099.png"
+  },
+  {
+    "id": 100,
+    "name": "Voltorbe",
+    "type1": "Electrique",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Voltorbe est un Pokémon de type Electrique. Il se trouve dans la région de Kanto et évolue en Électrode.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/100.png"
+  },
+  {
+    "id": 101,
+    "name": "Électrode",
+    "type1": "Electrique",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Électrode est un Pokémon de type Electrique. Il est l'évolution de Voltorbe.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/101.png"
+  },
+  {
+    "id": 102,
+    "name": "Noeunoeuf",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Noeunoeuf est un Pokémon de type Normal. Il se trouve dans la région de Kanto et évolue en Noadkoko.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/102.png"
+  },
+  {
+    "id": 103,
+    "name": "Noadkoko",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": true,
+    "price": 38.99,
+    "description": "Noadkoko est un Pokémon de type Normal. Il est l'évolution de Noeunoeuf.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/103.png"
+  },
+  {
+    "id": 104,
+    "name": "Osselait",
+    "type1": "Sol",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Osselait est un Pokémon de type Sol. Il se trouve dans la région de Kanto et évolue en Ossatueur.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/104.png"
+  },
+  {
+    "id": 105,
+    "name": "Ossatueur",
+    "type1": "Sol",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Ossatueur est un Pokémon de type Sol. Il est l'évolution d'Osselait.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/105.png"
+  },
+  {
+    "id": 106,
+    "name": "Kicklee",
+    "type1": "Combat",
+    "type2": "",
+    "evolution": false,
+    "price": 48.99,
+    "description": "Kicklee est un Pokémon de type Combat. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/106.png"
+  },
+  {
+    "id": 107,
+    "name": "Tygnon",
+    "type1": "Combat",
+    "type2": "",
+    "evolution": false,
+    "price": 48.99,
+    "description": "Tygnon est un Pokémon de type Combat. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/107.png"
+  },
+  {
+    "id": 108,
+    "name": "Excelangue",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": false,
+    "price": 37.99,
+    "description": "Excelangue est un Pokémon de type Normal. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/108.png"
+  },
+  {
+    "id": 109,
+    "name": "Smogo",
+    "type1": "Poison",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Smogo est un Pokémon de type Poison. Il se trouve dans la région de Kanto et évolue en Smogogo.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/109.png"
+  },
+  {
+    "id": 110,
+    "name": "Smogogo",
+    "type1": "Poison",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Smogogo est un Pokémon de type Poison. Il est l'évolution de Smogo.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/110.png"
+  },
+  {
+    "id": 111,
+    "name": "Rhinocorne",
+    "type1": "Sol",
+    "type2": "",
+    "evolution": true,
+    "price": 34.99,
+    "description": "Rhinocorne est un Pokémon de type Sol. Il se trouve dans la région de Kanto et évolue en Rhinoféros.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/111.png"
+  },
+  {
+    "id": 112,
+    "name": "Rhinoféros",
+    "type1": "Sol",
+    "type2": "",
+    "evolution": true,
+    "price": 49.99,
+    "description": "Rhinoféros est un Pokémon de type Sol. Il est l'évolution de Rhinocorne.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/112.png"
+  },
+  {
+    "id": 113,
+    "name": "Leveinard",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": false,
+    "price": 37.99,
+    "description": "Leveinard est un Pokémon de type Normal. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/113.png"
+  },
+  {
+    "id": 114,
+    "name": "Saquedeneu",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": false,
+    "price": 42.99,
+    "description": "Saquedeneu est un Pokémon de type Normal. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/114.png"
+  },
+  {
+    "id": 115,
+    "name": "Kangourex",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": false,
+    "price": 54.99,
+    "description": "Kangourex est un Pokémon de type Normal. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/115.png"
+  },
+  {
+    "id": 116,
+    "name": "Hypotrempe",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Hypotrempe est un Pokémon de type Eau. Il se trouve dans la région de Kanto et évolue en Hypocéan.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/116.png"
+  },
+  {
+    "id": 117,
+    "name": "Hypocéan",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Hypocéan est un Pokémon de type Eau. Il est l'évolution d'Hypotrempe.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/117.png"
+  },
+  {
+    "id": 118,
+    "name": "Poissirène",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Poissirène est un Pokémon de type Eau. Il se trouve dans la région de Kanto et évolue en Poissoroy.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/118.png"
+  },
+  {
+    "id": 119,
+    "name": "Poissoroy",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Poissoroy est un Pokémon de type Eau. Il est l'évolution de Poissirène.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/119.png"
+  },
+  {
+    "id": 120,
+    "name": "Stari",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Stari est un Pokémon de type Eau. Il se trouve dans la région de Kanto et évolue en Staross.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/120.png"
+  },
+  {
+    "id": 121,
+    "name": "Staross",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Staross est un Pokémon de type Eau. Il est l'évolution de Stari.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/121.png"
+  },
+  {
+    "id": 122,
+    "name": "M. Mime",
+    "type1": "Psy",
+    "type2": "Fée",
+    "evolution": false,
+    "price": 62.99,
+    "description": "M. Mime est un Pokémon de type Psy et Fée. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/122.png"
+  },
+  {
+    "id": 123,
+    "name": "Insécateur",
+    "type1": "Insecte",
+    "type2": "Vol",
+    "evolution": false,
+    "price": 59.99,
+    "description": "Insécateur est un Pokémon de type Insecte et Vol. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/123.png"
+  },
+  {
+    "id": 124,
+    "name": "Lippoutou",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": false,
+    "price": 44.99,
+    "description": "Lippoutou est un Pokémon de type Normal. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/124.png"
+  },
+  {
+    "id": 125,
+    "name": "Élektek",
+    "type1": "Electrique",
+    "type2": "",
+    "evolution": false,
+    "price": 37.99,
+    "description": "Élektek est un Pokémon de type Electrique. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/125.png"
+  },
+  {
+    "id": 126,
+    "name": "Magmar",
+    "type1": "Feu",
+    "type2": "",
+    "evolution": false,
+    "price": 51.99,
+    "description": "Magmar est un Pokémon de type Feu. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/126.png"
+  },
+  {
+    "id": 127,
+    "name": "Scarabrute",
+    "type1": "Insecte",
+    "type2": "Combat",
+    "evolution": false,
+    "price": 47.99,
+    "description": "Scarabrute est un Pokémon de type Insecte et Combat. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/127.png"
+  },
+  {
+    "id": 128,
+    "name": "Tauros",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": false,
+    "price": 37.99,
+    "description": "Tauros est un Pokémon de type Normal. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/128.png"
+  },
+  {
+    "id": 129,
+    "name": "Magicarpe",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 2.99,
+    "description": "Magicarpe est un Pokémon de type Eau. Il se trouve dans la région de Kanto et évolue en Léviator.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png"
+  },
+  {
+    "id": 130,
+    "name": "Léviator",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 47.99,
+    "description": "Léviator est un Pokémon de type Eau. Il est l'évolution de Magicarpe.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/130.png"
+  },
+  {
+    "id": 131,
+    "name": "Lokhlass",
+    "type1": "Glace",
+    "type2": "",
+    "evolution": false,
+    "price": 37.99,
+    "description": "Lokhlass est un Pokémon de type Glace. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/131.png"
+  },
+  {
+    "id": 132,
+    "name": "Métamorph",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": false,
+    "price": 51.99,
+    "description": "Métamorph est un Pokémon de type Normal. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png"
+  },
+  {
+    "id": 133,
+    "name": "Évoli",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": true,
+    "price": 24.99,
+    "description": "Évoli est un Pokémon de type Normal. Il se trouve dans la région de Kanto et évolue en Aquali, Voltali ou Pyroli.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png"
+  },
+  {
+    "id": 134,
+    "name": "Aquali",
+    "type1": "Eau",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Aquali est un Pokémon de type Eau. Il est l'évolution d'Évoli.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/134.png"
+  },
+  {
+    "id": 135,
+    "name": "Voltali",
+    "type1": "Electrique",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Voltali est un Pokémon de type Electrique. Il est l'évolution d'Évoli.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/135.png"
+  },
+  {
+    "id": 136,
+    "name": "Pyroli",
+    "type1": "Feu",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Pyroli est un Pokémon de type Feu. Il est l'évolution d'Évoli.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/136.png"
+  },
+  {
+    "id": 137,
+    "name": "Porygon",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": false,
+    "price": 99.99,
+    "description": "Porygon est un Pokémon de type Normal. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/137.png"
+  },
+  {
+    "id": 138,
+    "name": "Amonita",
+    "type1": "Roche",
+    "type2": "Eau",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Amonita est un Pokémon de type Roche et Eau. Il se trouve dans la région de Kanto et évolue en Amonistar.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/138.png"
+  },
+  {
+    "id": 139,
+    "name": "Amonistar",
+    "type1": "Roche",
+    "type2": "Eau",
+    "evolution": true,
+    "price": 52.99,
+    "description": "Amonistar est un Pokémon de type Roche et Eau. Il est l'évolution d'Amonita.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/139.png"
+  },
+  {
+    "id": 140,
+    "name": "Kabuto",
+    "type1": "Roche",
+    "type2": "Eau",
+    "evolution": true,
+    "price": 37.99,
+    "description": "Kabuto est un Pokémon de type Roche et Eau. Il se trouve dans la région de Kanto et évolue en Kabutops.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/140.png"
+  },
+  {
+    "id": 141,
+    "name": "Kabutops",
+    "type1": "Roche",
+    "type2": "Eau",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Kabutops est un Pokémon de type Roche et Eau. Il est l'évolution de Kabuto.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/141.png"
+  },
+  {
+    "id": 142,
+    "name": "Ptéra",
+    "type1": "Roche",
+    "type2": "Vol",
+    "evolution": false,
+    "price": 49.99,
+    "description": "Ptéra est un Pokémon de type Roche et Vol. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/142.png"
+  },
+  {
+    "id": 143,
+    "name": "Ronflex",
+    "type1": "Normal",
+    "type2": "",
+    "evolution": false,
+    "price": 62.99,
+    "description": "Ronflex est un Pokémon de type Normal. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png"
+  },
+  {
+    "id": 144,
+    "name": "Artikodin",
+    "type1": "Glace",
+    "type2": "",
+    "evolution": false,
+    "price": 79.99,
+    "description": "Artikodin est un Pokémon de type Glace. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/144.png"
+  },
+  {
+    "id": 145,
+    "name": "Électhor",
+    "type1": "Electrique",
+    "type2": "",
+    "evolution": false,
+    "price": 79.99,
+    "description": "Électhor est un Pokémon de type Electrique. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/145.png"
+  },
+  {
+    "id": 146,
+    "name": "Sulfura",
+    "type1": "Feu",
+    "type2": "Vol",
+    "evolution": false,
+    "price": 79.99,
+    "description": "Sulfura est un Pokémon de type Feu et Vol. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/146.png"
+  },
+  {
+    "id": 147,
+    "name": "Minidraco",
+    "type1": "Dragon",
+    "type2": "",
+    "evolution": true,
+    "price": 51.99,
+    "description": "Minidraco est un Pokémon de type Dragon. Il se trouve dans la région de Kanto et évolue en Draco.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/147.png"
+  },
+  {
+    "id": 148,
+    "name": "Draco",
+    "type1": "Dragon",
+    "type2": "",
+    "evolution": true,
+    "price": 72.99,
+    "description": "Draco est un Pokémon de type Dragon. Il est l'évolution de Minidraco et évolue en Dracolosse.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/148.png"
+  },
+  {
+    "id": 149,
+    "name": "Dracolosse",
+    "type1": "Dragon",
+    "type2": "Vol",
+    "evolution": true,
+    "price": 89.99,
+    "description": "Dracolosse est un Pokémon de type Dragon et Vol. Il est l'évolution de Draco.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/149.png"
+  },
+  {
+    "id": 150,
+    "name": "Mewtwo",
+    "type1": "Psy",
+    "type2": "",
+    "evolution": false,
+    "price": 119.99,
+    "description": "Mewtwo est un Pokémon de type Psy. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png"
+  },
+  {
+    "id": 151,
+    "name": "Mew",
+    "type1": "Psy",
+    "type2": "",
+    "evolution": false,
+    "price": 119.99,
+    "description": "Mew est un Pokémon de type Psy. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png"
+  }
+]
