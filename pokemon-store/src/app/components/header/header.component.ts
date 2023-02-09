@@ -17,6 +17,6 @@ export class HeaderComponent {
   }
 
   logout() {
-    localStorage.removeItem('token'); // A remplacer par 'token' une fois implémenté
+    localStorage.removeItem('token');
   }
 }

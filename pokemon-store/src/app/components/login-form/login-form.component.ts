@@ -47,7 +47,6 @@ export class LoginFormComponent {
           const newToken = await this._service.createToken(userFound);
 
           localStorage.setItem('token', newToken);
-          console.log('localStorage : ', localStorage.getItem('token')); // *************************** A SUPPRIMER
           alert('Vous êtes connecté !');
           this.router.navigate(['/homePage']);
         } else {
