@@ -31,31 +31,31 @@ export default class Service {
    * Appelle la méthode getAllUsers() du repository
    * @returns La liste des utilisateurs
    */
-  public getAllUsers(): User[] {
+  public getAllUsers = (): User[] => {
     return this._repository.getAllUsers();
-  }
+  };
 
   /**
    * Appelle la méthode getUserById() du repository
    * @param id L'id de l'utilisateur à récupérer
    * @returns L'utilisateur correspondant à l'id
    */
-  public getUserById(id: number): User {
+  public getUserById = (id: number): User => {
     const result = this._repository.getUserById(id);
     if (!result) throw "Erreur, id introuvable";
     return result;
-  }
+  };
 
   /**
    * Appelle la méthode getUserByEmail() du repository
    * @param email L'email de l'utilisateur à récupérer
    * @returns L'utilisateur correspondant à l'email
    */
-  public getUserByEmail(email: string): User {
+  public getUserByEmail = (email: string): User => {
     const result = this._repository.getUserByEmail(email);
     if (!result) throw "Erreur, email introuvable";
     return result;
-  }
+  };
 
   /**
    * Crée un nouvel utilisateur et appelle la méthode createUser() du repository
@@ -65,19 +65,19 @@ export default class Service {
    * @param password Le mot de passe de l'utilisateur
    * @returns L'utilisateur créé
    */
-  public createUser(
+  public createUser = (
     firstName: string,
     lastName: string,
     email: string,
     password: string
-  ): User {
+  ): User => {
     // Génère une ID unique
     const uniqueId = getUniqueId(userListJson);
     // Crée un nouvel utilisateur
     const newUser = new User(uniqueId, firstName, lastName, email, password);
     this._repository.createUser(newUser);
     return newUser;
-  }
+  };
 
   /**
    * Met à jour les informations d'un utilisateur et appelle la méthode updateUser() du repository
@@ -88,13 +88,13 @@ export default class Service {
    * @param password Le nouveau mot de passe de l'utilisateur
    * @returns L'utilisateur mis à jour
    */
-  public updateUser(
+  public updateUser = (
     id: number,
     firstName: string,
     lastName: string,
     email: string,
     password: string
-  ): User {
+  ): User => {
     // Récupère l'index de l'utilisateur à mettre à jour
     const index = this._repository.getAllUsers().indexOf(this.getUserById(id));
     if (index.toString() == "") throw "Erreur, id introuvable";
@@ -108,16 +108,16 @@ export default class Service {
 
     this._repository.updateUser(index, userToUpdate);
     return userToUpdate;
-  }
+  };
 
   // ********************* POKEMONS *********************
 
   /**
    * Appelle la méthode getAllPokemons() du repository
    */
-  public getAllPokemons(): Pokemon[] {
+  public getAllPokemons = (): Pokemon[] => {
     return this._repository.getAllPokemons();
-  }
+  };
 
   // ********************* TOKENS *********************
 
@@ -127,7 +127,10 @@ export default class Service {
    * @param password Le mot de passe de l'utilisateur à authentifier
    * @returns Le token de l'utilisateur
    */
-  public async createToken(email: string, password: string): Promise<User> {
+  public createToken = async (
+    email: string,
+    password: string
+  ): Promise<String> => {
     const userFound = await this.getUserByEmail(email);
 
     // Si l'utilisateur n'existe pas
@@ -139,16 +142,16 @@ export default class Service {
     // Si l'utilisateur existe et que le mot de passe est correct
     const newToken = await this._repository.createToken(userFound);
     return newToken;
-  }
+  };
 
   /**
    * Appele la méthode verifyToken() du repository
    * @param token Le token à vérifier
    * @returns Le token décodé
    */
-  public async verifyToken(token: string): Promise<User> {
+  public verifyToken = async (token: string): Promise<User> => {
     const decodedToken = this._repository.verifyToken(token);
     if (!decodedToken) throw "Erreur, token invalide";
     return decodedToken;
-  }
+  };
 }

@@ -36,6 +36,7 @@ export class LoginFormComponent {
       const userExist: boolean = await this._service.checkEmailAlreadyExists(
         this.userForm.value.email
       );
+
       // Si il existe, récupère l'utilisateur et vérifie si le mot de passe est correct
       if (userExist) {
         const userFound: Users = await this._service.getUserByEmail(
@@ -43,12 +44,9 @@ export class LoginFormComponent {
         );
         // Si le mot de passe est correct, connecte l'utilisateur, sinon affiche une erreur
         if (userFound.password === this.userForm.value.password) {
-          //
-          // ********************** Créer un JWT
-          //
-          // ********************** Stocker ici le JWT au lieu de l'id
-          //
-          localStorage.setItem('id', userFound.id.toString());
+          const newToken = await this._service.createToken(userFound);
+
+          localStorage.setItem('token', newToken);
           alert('Vous êtes connecté !');
           this.router.navigate(['/homePage']);
         } else {
