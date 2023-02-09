@@ -93,7 +93,6 @@ export default class Repository {
    * @returns Le token créé
    */
   public createToken = (user: User): string => {
-    console.log("********** Repository  **********"); // **********************************
     const payload: User = user;
     const newToken = _jwt.sign(payload, jwt_Secret, { expiresIn: "1h" });
     return newToken;

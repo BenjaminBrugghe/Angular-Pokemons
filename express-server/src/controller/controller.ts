@@ -85,7 +85,6 @@ export default class Controller {
    * Récupère les données du body et appelle la méthode createToken() du service
    */
   public createToken = async (req: Request, res: Response): Promise<void> => {
-    console.log("********** Controller  **********"); // **********************************
     const email: string = req.body.email;
     const password: string = req.body.password;
     try {

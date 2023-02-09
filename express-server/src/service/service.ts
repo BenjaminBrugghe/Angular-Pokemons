@@ -131,7 +131,6 @@ export default class Service {
     email: string,
     password: string
   ): Promise<String> => {
-    console.log("********** Service  **********"); // **********************************
     const userFound = await this.getUserByEmail(email);
 
     // Si l'utilisateur n'existe pas
