@@ -1,6 +1,7 @@
 import User from "../models/user";
 import Pokemon from "../models/pokemons";
 import Repository from "../repository/repository";
+import bcrypt from "bcrypt";
 
 // Pour la persistance des données en JSON
 const { readFileSync } = require("fs");
@@ -25,8 +26,7 @@ export default class Service {
     this._repository = repository;
   }
 
-  // ********************* USERS *********************
-
+  //#region USERS
   /**
    * Appelle la méthode getAllUsers() du repository
    * @returns La liste des utilisateurs
@@ -65,16 +65,26 @@ export default class Service {
    * @param password Le mot de passe de l'utilisateur
    * @returns L'utilisateur créé
    */
-  public createUser = (
+  public createUser = async (
     firstName: string,
     lastName: string,
     email: string,
     password: string
-  ): User => {
+  ): Promise<User> => {
     // Génère une ID unique
     const uniqueId = getUniqueId(userListJson);
+
+    // Hashage du mot de passe
+    const cryptedPassword = await this.hashPassword(password);
+
     // Crée un nouvel utilisateur
-    const newUser = new User(uniqueId, firstName, lastName, email, password);
+    const newUser = new User(
+      uniqueId,
+      firstName,
+      lastName,
+      email,
+      cryptedPassword
+    );
     this._repository.createUser(newUser);
     return newUser;
   };
@@ -109,8 +119,9 @@ export default class Service {
     this._repository.updateUser(index, userToUpdate);
     return userToUpdate;
   };
+  //#endregion
 
-  // ********************* POKEMONS *********************
+  //#region POKEMONS
 
   /**
    * Appelle la méthode getAllPokemons() du repository
@@ -118,9 +129,9 @@ export default class Service {
   public getAllPokemons = (): Pokemon[] => {
     return this._repository.getAllPokemons();
   };
+  //#endregion
 
-  // ********************* TOKENS *********************
-
+  //#region TOKENS
   /**
    * Vérifie les informations de l'utilisateur et appelle la méthode createToken() du repository
    * @param email L'email de l'utilisateur à authentifier
@@ -154,4 +165,35 @@ export default class Service {
     if (!decodedToken) throw "Erreur, token invalide";
     return decodedToken;
   };
+  //#endregion
+
+  //#region HASH PASSWORD
+
+  /**
+   * Hash le mot de passe de l'utilisateur
+   * @param password Le mot de passe à hasher
+   * @returns Le mot de passe hashé
+   */
+  public hashPassword = async (password: string): Promise<string> => {
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+    return hashedPassword;
+  };
+
+  /**
+   * Récupère l'utilisateur correspondant à l'email et vérifie le mot de passe saisie avec le mot de passe hashé
+   * @param userEmail L'email de l'utilisateur à vérifier
+   * @param userPassword Le mot de passe de l'utilisateur à vérifier
+   * @returns True si le mot de passe est correct, false sinon
+   */
+  public verifyHashPassword = async (
+    userEmail: string,
+    userPassword: string
+  ): Promise<boolean> => {
+    const userFound = await this.getUserByEmail(userEmail);
+    const result = await bcrypt.compare(userPassword, userFound.password);
+    return result;
+  };
+
+  //#endregion
 }

@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "firstName": "Benjamin",
-    "lastName": "Brugghe",
-    "email": "Adresse@email.com",
-    "password": "azerty",
+    "firstname": "Benjamin",
+    "lastname": "Brugghe",
+    "email": "adresse@email.com",
+    "password": "$2b$10$jxDvhqwOzQ27BByTVkedW.41QOMQs6REjHsalXqhymArZqGfbe9D.",
     "cart": []
   }
 ]
