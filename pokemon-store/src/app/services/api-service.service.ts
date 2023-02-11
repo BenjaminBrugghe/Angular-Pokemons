@@ -13,10 +13,9 @@ export class ApiServiceService {
   private _URL_POKEMONS = 'http://localhost:3001/pokemons';
   private _URL_CREATE_TOKEN = 'http://localhost:3001/createToken';
   private _URL_VERIFY_TOKEN = 'http://localhost:3001/verifyToken';
+  private _URL_VERIFY_PASSWORD = 'http://localhost:3001/verifyPassword';
 
-  // ******************** USERS ********************
-
-  // ********** GET **********
+  //#region USERS
 
   /**
    * Récupère la liste des utilisateurs
@@ -47,13 +46,11 @@ export class ApiServiceService {
    * @returns L'utilisateur correspondant à l'email
    */
   public getUserByEmail = async (email: string): Promise<Users> => {
-    const response = await this.getAllUsers()
-      .then((response) => response.find((user: Users) => user.email === email))
+    const response = await fetch(`${this._URL_USERS}/email/${email}`)
+      .then((response) => response.json())
       .catch((error) => console.log(error));
     return response;
   };
-
-  // ********** POST **********
 
   /**
    * Crée un nouvel utilisateur
@@ -94,10 +91,9 @@ export class ApiServiceService {
       .catch((error) => console.log(error));
     return response;
   };
+  //#endregion
 
-  // ******************** POKEMONS ********************
-
-  // ********** GET **********
+  //#region POKEMONS
 
   /**
    * Récupère la liste des pokémons
@@ -109,8 +105,9 @@ export class ApiServiceService {
       .catch((error) => console.log(error));
     return response;
   };
+  //#endregion
 
-  // ******************** VERIFICATIONS ********************
+  //#region VERIFICATIONS
 
   /**
    * Vérifie si l'email existe déjà dans la BDD
@@ -130,8 +127,39 @@ export class ApiServiceService {
     }
   };
 
-  // ******************** TOKEN ********************
+  /**
+   * Vérifie si le mot de passe est valide
+   * @param email L'email saisie par l'utilisateur
+   * @param password Le mot de passe saisie par l'utilisateur
+   * @returns true si le mot de passe est valide, false sinon
+   */
+  public checkPassword = async (
+    email: string,
+    password: string
+  ): Promise<boolean> => {
+    const user = {
+      email: email,
+      password: password,
+    };
+    const response = await fetch(this._URL_VERIFY_PASSWORD, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    }).then((response) => response.json().catch((error) => console.log(error)));
+    return response;
+  };
 
+  //#endregion
+
+  //#region TOKENS
+
+  /**
+   * Crée un token pour l'utilisateur
+   * @param user L'utilisateur pour lequel on crée le token
+   * @returns Le token créé
+   */
   public createToken = async (user: any): Promise<any> => {
     const response = await fetch(this._URL_CREATE_TOKEN, {
       method: 'POST',
@@ -151,6 +179,11 @@ export class ApiServiceService {
     return response;
   };
 
+  /**
+   * Vérifie si le token est valide
+   * @param token Le token à vérifier
+   * @returns Le token si valide, false sinon
+   */
   public verifyToken = async (token: string) => {
     const response = await fetch(this._URL_VERIFY_TOKEN, {
       method: 'GET',
@@ -163,4 +196,5 @@ export class ApiServiceService {
       .catch((error) => console.log(error));
     return response;
   };
+  //#endregion
 }
