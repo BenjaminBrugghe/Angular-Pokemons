@@ -9,7 +9,7 @@ export default class Controller {
     this._service = service;
   }
 
-  // ********************* USERS *********************
+  //#region USERS
 
   /**
    * Appelle la méthode getAllUsers() du service
@@ -38,11 +38,11 @@ export default class Controller {
    * Récupère les données du body et appelle la méthode createUser() du service
    */
   public createUser = (req: Request, res: Response): void => {
-    const firstname: string = req.body.firstname;
-    const lastname: string = req.body.lastname;
+    const firstname: string = req.body.firstName;
+    const lastname: string = req.body.lastName;
     const email: string = req.body.email;
     const password: string = req.body.password;
-    const newUser: User = this._service.createUser(
+    const newUser: Promise<User> = this._service.createUser(
       firstname,
       lastname,
       email,
@@ -70,16 +70,18 @@ export default class Controller {
     res.send(updatedUser);
   };
 
-  // ********************* POKEMONS *********************
+  //#endregion
 
+  //#region POKEMONS
   /**
    * Appelle la méthode getAllPokemons() du service
    */
   public getAllPokemons = (req: Request, res: Response): void => {
     res.send(this._service.getAllPokemons());
   };
+  //#endregion
 
-  // ********************* TOKENS *********************
+  //#region TOKENS
 
   /**
    * Récupère les données du body et appelle la méthode createToken() du service
@@ -107,4 +109,27 @@ export default class Controller {
       res.send(error);
     }
   };
+
+  //#endregion
+
+  //#region HASS PASSWORD
+
+  /**
+   * Récupère les données du body et appelle la méthode verifyHashPassword() du service
+   */
+  public verifyHashPassword = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
+    const email = req.body.email;
+    const password = req.body.password;
+    try {
+      const result = await this._service.verifyHashPassword(email, password);
+      res.send(result);
+    } catch (error) {
+      res.send(error);
+    }
+  };
+
+  //#endregion
 }
