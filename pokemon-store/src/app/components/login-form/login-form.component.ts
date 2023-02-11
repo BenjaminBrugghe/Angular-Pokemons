@@ -43,7 +43,12 @@ export class LoginFormComponent {
           this.userForm.value.email
         );
         // Si le mot de passe est correct, connecte l'utilisateur, sinon affiche une erreur
-        if (userFound.password === this.userForm.value.password) {
+        const passwordIsCorrect: boolean = await this._service.checkPassword(
+          this.userForm.value.email,
+          this.userForm.value.password
+        );
+
+        if (passwordIsCorrect) {
           const newToken = await this._service.createToken(userFound);
 
           localStorage.setItem('token', newToken);
