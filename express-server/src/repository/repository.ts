@@ -24,7 +24,7 @@ export default class Repository {
   private userList: User[] = userListJson;
   private pokemonList: Pokemon[] = pokemonListJson;
 
-  // ********************* USERS *********************
+  //#region USERS
 
   /**
    * Récupère la liste des utilisateurs
@@ -75,8 +75,9 @@ export default class Repository {
     return this.userList[index];
   };
 
-  // ********************* POKEMONS *********************
+  //#endregion
 
+  //#region POKEMONS
   /**
    * Récupère la liste des pokémons
    * @returns La liste des pokémons
@@ -84,9 +85,9 @@ export default class Repository {
   public getAllPokemons = (): Pokemon[] => {
     return this.pokemonList;
   };
+  //#endregion
 
-  // ********************* TOKENS *********************
-
+  //#region TOKEN
   /**
    * Crée un nouveau token contenant les infos de l'utilisateur
    * @param user L'utilisateur à stocker dans le token
@@ -107,4 +108,5 @@ export default class Repository {
     const decodedToken = _jwt.verify(token, jwt_Secret);
     return decodedToken;
   };
+  //#endregion
 }
