@@ -1,10 +1,4 @@
 export default class Users {
-  // Pour le 'response.find' de la méthode getUserByEmail
-  find(arg0: (user: Users) => boolean): any {
-    throw new Error('Method not implemented.');
-  }
-
-  // Attributs
   id!: number;
   firstName: string;
   lastName: string;
@@ -12,13 +6,11 @@ export default class Users {
   password: string;
   cart: any[] = [];
 
-  // Constructeur
   constructor(
     firstName: string,
     lastName: string,
     email: string,
-    password: string,
-    cart: any[] = []
+    password: string
   ) {
     this.firstName = firstName;
     this.lastName = lastName;
