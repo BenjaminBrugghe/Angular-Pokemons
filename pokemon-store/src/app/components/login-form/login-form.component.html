@@ -18,3 +18,5 @@
 
     </form>
 </div>
+<app-success-popup *ngIf="showSuccessPopup == true" message="Authentification réussie !"></app-success-popup>
+<app-error-popup *ngIf="showErrorPopup == true" message="Erreur d'authentification !"></app-error-popup>
