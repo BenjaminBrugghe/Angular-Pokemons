@@ -1,0 +1,38 @@
+.error-popup {
+  position: absolute;
+  height: 50px;
+  width: 400px;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(161, 24, 24);
+  color: white;
+  border-radius: 5px;
+  bottom: 5%;
+  left: 1%;
+  animation: popup-animation 200ms ease-in;
+
+  .errorIcon {
+    font-size: 1.5em;
+  }
+}
+
+@keyframes popup-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .error-popup {
+    height: 40px;
+    width: 200px;
+    font-size: 1em;
+    left: 2%;
+  }
+}
