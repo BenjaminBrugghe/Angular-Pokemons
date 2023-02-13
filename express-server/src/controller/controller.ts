@@ -115,7 +115,7 @@ export default class Controller {
 
   //#endregion
 
-  //#region HASS PASSWORD
+  //#region VERIFICATIONS
 
   /**
    * Récupère les données du body et appelle la méthode verifyHashPassword() du service
@@ -128,6 +128,22 @@ export default class Controller {
     const password = req.body.password;
     try {
       const result = await this._service.verifyHashPassword(email, password);
+      res.send(result);
+    } catch (error) {
+      res.send(error);
+    }
+  };
+
+  /**
+   * Récupère les données du body et appelle la méthode verifyEmailAlreadyExists() du service
+   */
+  public verifyEmailAlreadyExists = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
+    const email = req.body.email;
+    try {
+      const result = await this._service.verifyEmailAlreadyExists(email);
       res.send(result);
     } catch (error) {
       res.send(error);

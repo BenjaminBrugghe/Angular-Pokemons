@@ -25,7 +25,8 @@ router.get("/pokemons", _controller.getAllPokemons);
 router.post("/createToken", _controller.createToken);
 router.get("/verifyToken", _controller.verifyToken);
 
-// ****************** HASH PASSWORD ******************
+// ****************** VERIFICATIONS ******************
 router.post("/verifyPassword", _controller.verifyHashPassword);
+router.post("/verifyEmail", _controller.verifyEmailAlreadyExists);
 
 export default router;
