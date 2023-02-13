@@ -1,10 +1,1 @@
-[
-  {
-    "id": 1,
-    "firstname": "Benjamin",
-    "lastname": "Brugghe",
-    "email": "adresse@email.com",
-    "password": "$2b$10$jxDvhqwOzQ27BByTVkedW.41QOMQs6REjHsalXqhymArZqGfbe9D.",
-    "cart": []
-  }
-]
+[{"id":1,"firstname":"Benjamin","lastname":"Brugghe","email":"adresse@email.com","password":"$2b$10$jxDvhqwOzQ27BByTVkedW.41QOMQs6REjHsalXqhymArZqGfbe9D.","cart":[{"id":2,"name":"Herbizarre","type1":"Plante","type2":"Poison","evolution":true,"price":37.99,"description":"Herbizarre est un Pokémon de type Plante et Poison. Il est l'évolution de Bulbizarre et évolue en Florizarre.","image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"},{"id":3,"name":"Florizarre","type1":"Plante","type2":"Poison","evolution":true,"price":51.99,"description":"Florizarre est un Pokémon de type Plante et Poison. Il est l'évolution de Herbizarre.","image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"},{"id":1,"name":"Bulbizarre","type1":"Plante","type2":"Poison","evolution":true,"price":24.99,"description":"Bulbizarre est un Pokémon de type Plante et Poison. Il est l'un des Pokémon de départ de la région de Kanto et évolue en Herbizarre.","image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"},{"id":4,"name":"Salamèche","type1":"Feu","type2":"","evolution":true,"price":24.99,"description":"Salamèche est un Pokémon de type Feu. Il est l'un des Pokémon de départ de la région de Kanto et évolue en Reptincel.","image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"},{"id":3,"name":"Florizarre","type1":"Plante","type2":"Poison","evolution":true,"price":51.99,"description":"Florizarre est un Pokémon de type Plante et Poison. Il est l'évolution de Herbizarre.","image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"},{"id":6,"name":"Dracaufeu","type1":"Feu","type2":"Vol","evolution":true,"price":51.99,"description":"Dracaufeu est un Pokémon de type Feu et Vol. Il est l'évolution de Reptincel.","image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"}]}]

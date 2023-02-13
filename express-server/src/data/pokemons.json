@@ -1433,20 +1433,20 @@
     "id": 144,
     "name": "Artikodin",
     "type1": "Glace",
-    "type2": "",
+    "type2": "Vol",
     "evolution": false,
     "price": 79.99,
-    "description": "Artikodin est un Pokémon de type Glace. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "description": "Artikodin est un Pokémon de type Glace et Vol. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/144.png"
   },
   {
     "id": 145,
     "name": "Électhor",
     "type1": "Electrique",
-    "type2": "",
+    "type2": "Vol",
     "evolution": false,
     "price": 79.99,
-    "description": "Électhor est un Pokémon de type Electrique. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
+    "description": "Électhor est un Pokémon de type Electrique et Vol. Il se trouve dans la région de Kanto et n'a pas d'évolutions.",
     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/145.png"
   },
   {

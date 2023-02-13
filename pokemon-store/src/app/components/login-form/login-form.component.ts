@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 import { Router } from '@angular/router';
 import Users from 'src/app/models/Users';
+import { SuccessPopupComponent } from '../snackbars/success-popup/success-popup.component';
+import { ErrorPopupComponent } from '../snackbars/error-popup/error-popup.component';
 
 @Component({
   selector: 'app-login-form',
@@ -25,10 +27,15 @@ export class LoginFormComponent {
     return this.userForm.controls;
   }
 
+  // Pour afficher les popups
+  public showSuccessPopup: boolean = false;
+  public showErrorPopup: boolean = false;
+
   private _service: ApiServiceService = new ApiServiceService();
 
   public async onSubmit(): Promise<void> {
     this.submitted = true;
+    this.showErrorPopup = false;
 
     // Si le formulaire est valide
     if (this.userForm.valid) {
@@ -51,15 +58,23 @@ export class LoginFormComponent {
         if (passwordIsCorrect) {
           const newToken = await this._service.createToken(userFound);
 
+          // Stocke le token dans le localStorage
           localStorage.setItem('token', newToken);
-          alert('Vous êtes connecté !');
-          this.router.navigate(['/homePage']);
+
+          // Affiche la popup de succès
+          this.showSuccessPopup = true;
+
+          // Redirige vers la page principale après 1.5s
+          window.setTimeout(() => {
+            this.router.navigate(['homePage']);
+          }, 1500);
         } else {
-          alert("Erreur d'authentification !");
+          // Si le mot de passe est incorrect, affiche une erreur
+          this.showErrorPopup = true;
         }
         // Si l'utilisateur n'existe pas, affiche une erreur
       } else if (!userExist) {
-        alert("Erreur d'authentification !");
+        this.showErrorPopup = true;
       }
     }
   }

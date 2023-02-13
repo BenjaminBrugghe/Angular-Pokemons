@@ -14,6 +14,8 @@ import { FilterPipe } from '../assets/filter.pipe';
 import { CheckboxPipe } from '../assets/checkbox.pipe';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { SuccessPopupComponent } from './components/snackbars/success-popup/success-popup.component';
+import { ErrorPopupComponent } from './components/snackbars/error-popup/error-popup.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     CheckboxPipe,
     UnauthorizedComponent,
     NotfoundComponent,
+    SuccessPopupComponent,
+    ErrorPopupComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
