@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
 
-  .homepageInput {
+  .homepageSearchbar {
     height: 30px;
     width: 30%;
     min-width: 300px;
@@ -13,10 +13,11 @@
     margin-bottom: 1%;
   }
 }
+
 .filterByType {
   height: 8%;
-  width: 88%;
-  margin: 0 5vw 0 7vw;
+  width: 60%;
+  margin: 0 auto;
 
   div {
     margin-bottom: 1%;
@@ -59,8 +60,8 @@
 }
 
 @media screen and (max-width: 830px) {
-  .homepageInput {
-    margin: 0.4% 25%;
+  .homepageSearchbar {
+    margin: 0.4% auto;
   }
 
   .filterByType {
