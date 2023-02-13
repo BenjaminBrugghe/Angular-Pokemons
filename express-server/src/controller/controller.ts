@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import Pokemons from "../models/pokemons";
 import User from "../models/user";
 import Service from "../service/service";
 
@@ -60,12 +61,14 @@ export default class Controller {
     const lastname: string = req.body.lastname;
     const email: string = req.body.email;
     const password: string = req.body.password;
+    const cart: Pokemons[] = req.body.cart;
     const updatedUser: User = this._service.updateUser(
       +id,
       firstname,
       lastname,
       email,
-      password
+      password,
+      cart
     );
     res.send(updatedUser);
   };

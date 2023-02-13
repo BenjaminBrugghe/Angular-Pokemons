@@ -13,3 +13,4 @@
     <p class="pokemonPrice"> {{pokemon.price}} €</p>
     <button class="addToCartButton" (click)="addToCart()">Ajouter au panier</button>
 </div>
+<app-success-popup *ngIf="showSuccessPopup == true" message="Article ajouté au panier !"></app-success-popup>

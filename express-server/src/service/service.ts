@@ -103,7 +103,8 @@ export default class Service {
     firstName: string,
     lastName: string,
     email: string,
-    password: string
+    password: string,
+    cart: Pokemon[]
   ): User => {
     // Récupère l'index de l'utilisateur à mettre à jour
     const index = this._repository.getAllUsers().indexOf(this.getUserById(id));
@@ -115,6 +116,7 @@ export default class Service {
     userToUpdate.lastname = lastName;
     userToUpdate.email = email;
     userToUpdate.password = password;
+    userToUpdate.cart = cart;
 
     this._repository.updateUser(index, userToUpdate);
     return userToUpdate;
