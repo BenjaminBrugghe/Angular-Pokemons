@@ -88,6 +88,7 @@ export default class Repository {
   //#endregion
 
   //#region TOKEN
+
   /**
    * Crée un nouveau token contenant les infos de l'utilisateur
    * @param user L'utilisateur à stocker dans le token
@@ -108,5 +109,19 @@ export default class Repository {
     const decodedToken = _jwt.verify(token, jwt_Secret);
     return decodedToken;
   };
+
+  //#endregion
+
+  //#region VERIFICATIONS
+
+  /**
+   * Vérifie si l'email existe déjà dans la liste des utilisateurs
+   * @param email l'email à vérifier
+   * @returns L'utilisateur correspondant à l'email
+   */
+  public verifyEmailAlreadyExists = (email: string): User => {
+    return this.userList.find((user) => user.email === email)!;
+  };
+
   //#endregion
 }
