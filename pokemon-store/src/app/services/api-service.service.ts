@@ -13,6 +13,7 @@ export class ApiServiceService {
   private _URL_POKEMONS = 'http://localhost:3001/pokemons';
   private _URL_CREATE_TOKEN = 'http://localhost:3001/createToken';
   private _URL_VERIFY_TOKEN = 'http://localhost:3001/verifyToken';
+  private _URL_VERIFY_EMAIL = 'http://localhost:3001/verifyEmail';
   private _URL_VERIFY_PASSWORD = 'http://localhost:3001/verifyPassword';
 
   //#region USERS
@@ -114,17 +115,20 @@ export class ApiServiceService {
    * @param email L'email à vérifier
    * @returns true si l'email existe déjà, false sinon
    */
-  public checkEmailAlreadyExists = async (email: string): Promise<any> => {
-    const userList = await this.getAllUsers();
-    try {
-      const userFound = await userList.find(
-        (user: Users) => user.email === email
-      );
-      if (userFound) return true;
-      return false;
-    } catch (error) {
-      return console.log(error);
-    }
+  public checkEmailAlreadyExists = async (email: string): Promise<boolean> => {
+    const user = {
+      email: email,
+    };
+    const response = await fetch(this._URL_VERIFY_EMAIL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+    return response;
   };
 
   /**

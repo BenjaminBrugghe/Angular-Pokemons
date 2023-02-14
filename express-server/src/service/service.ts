@@ -182,6 +182,10 @@ export default class Service {
     return hashedPassword;
   };
 
+  //#endregion
+
+  //#region VERIFICATIONS
+
   /**
    * Récupère l'utilisateur correspondant à l'email et vérifie le mot de passe saisie avec le mot de passe hashé
    * @param userEmail L'email de l'utilisateur à vérifier
@@ -195,6 +199,17 @@ export default class Service {
     const userFound = await this.getUserByEmail(userEmail);
     const result = await bcrypt.compare(userPassword, userFound.password);
     return result;
+  };
+
+  /**
+   * Vérifie si l'email de l'utilisateur existe déjà
+   * @param email L'email de l'utilisateur à vérifier
+   * @returns True si l'email existe déjà, false sinon
+   */
+  public verifyEmailAlreadyExists = async (email: string): Promise<boolean> => {
+    const userFound = await this._repository.verifyEmailAlreadyExists(email);
+    if (userFound) return true;
+    return false;
   };
 
   //#endregion
