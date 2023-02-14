@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-unauthorized',
@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./unauthorized.component.scss'],
 })
 export class UnauthorizedComponent {
-  constructor(private router: Router) {}
+  constructor(private location: Location) {}
 
   public goBack() {
-    this.router.navigate([-1]);
+    this.location.back();
   }
 }
