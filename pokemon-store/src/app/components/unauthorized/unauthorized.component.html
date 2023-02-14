@@ -1,1 +1,8 @@
-<p>unauthorized works!</p>
+<div class="unauthorized">
+    <h1>Erreur 401: unauthorized</h1>
+    <p>Un problème est survenu avec votre authentification, veuillez vous reconnecter.</p>
+    <div class="unauthorizedButtons">
+        <button class="unauthorizedBtn" (click)="goBack()">Retour</button>
+        <button class="unauthorizedBtn" routerLink="/">Connection</button>
+    </div>
+</div>
