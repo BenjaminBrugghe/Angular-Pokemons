@@ -30,6 +30,10 @@ export class RegisterFormComponent {
     return this.userForm.controls;
   }
 
+  // Pour afficher les popups
+  showSuccessPopup: boolean = false;
+  showErrorPopup: boolean = false;
+
   /**
    * Crée un nouvel utilisateur avec les valeurs du formulaire
    * @returns un nouvel utilisateur
@@ -57,6 +61,7 @@ export class RegisterFormComponent {
 
   public async onSubmit(): Promise<void> {
     this.submitted = true;
+    this.showErrorPopup = false;
 
     // Si le formulaire est valide
     if (this.userForm.valid) {
@@ -67,15 +72,17 @@ export class RegisterFormComponent {
 
       // Affiche une erreur si l'email existe déjà, sinon crée un nouvel utilisateur
       if (emailAlreadyExist) {
-        alert('Email déjà existant');
+        this.showErrorPopup = true;
       } else {
         const newUser: Users = this.createNewUser();
         this._service.createUser(newUser);
-        alert('Votre compte a bien été créé !');
-        this.router.navigate(['/']);
-      }
+        this.showSuccessPopup = true;
 
-      // ********************** Hasher le password
+        // Redirige vers la page de connection après 1.5s
+        window.setTimeout(() => {
+          this.router.navigate(['/']);
+        }, 1500);
+      }
     }
   }
 }
