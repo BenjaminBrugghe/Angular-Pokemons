@@ -98,3 +98,5 @@
 
     </form>
 </div>
+<app-success-popup *ngIf="showSuccessPopup" message="Compte créé avec succès !"></app-success-popup>
+<app-error-popup *ngIf="showErrorPopup" message="Erreur, cet email est déjà utilisé !"></app-error-popup>
