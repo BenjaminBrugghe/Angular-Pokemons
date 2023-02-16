@@ -39,8 +39,8 @@ export default class Controller {
    * Récupère les données du body et appelle la méthode createUser() du service
    */
   public createUser = (req: Request, res: Response): void => {
-    const firstname: string = req.body.firstName;
-    const lastname: string = req.body.lastName;
+    const firstname: string = req.body.firstname;
+    const lastname: string = req.body.lastname;
     const email: string = req.body.email;
     const password: string = req.body.password;
     const newUser: Promise<User> = this._service.createUser(

@@ -149,9 +149,6 @@ export default class Service {
     // Si l'utilisateur n'existe pas
     if (!userFound) throw "Erreur, email introuvable";
 
-    // Si le mot de passe est incorrect
-    if (userFound.password !== password) throw "Erreur, mot de passe incorrect";
-
     // Si l'utilisateur existe et que le mot de passe est correct
     const newToken = await this._repository.createToken(userFound);
     return newToken;
