@@ -26,6 +26,7 @@ router.post("/createToken", _controller.createToken);
 router.get("/verifyToken", _controller.verifyToken);
 
 // ****************** VERIFICATIONS ******************
+router.post("/hashPassword", _controller.hashPassword);
 router.post("/verifyPassword", _controller.verifyHashPassword);
 router.post("/verifyEmail", _controller.verifyEmailAlreadyExists);
 
