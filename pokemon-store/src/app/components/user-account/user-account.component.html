@@ -1,0 +1,87 @@
+<div class="userAccountContainer">
+    <h1>{{user.firstname}} {{user.lastname}} </h1>
+    <h1>Modifier mes informations :</h1>
+
+    <div class="userInfos">
+        <div>
+            Modifier mon nom
+            <i class="material-icons editIcon" (click)="toggleEditLastname()">edit</i>
+        </div>
+        <div class="userEdit" *ngIf="showEditLastname == true">
+            <!-- <input class="editInput" type="text" value={{user.lastname}} placeholder={{user.lastname}}> -->
+            <input class="editInput" type="text" placeholder={{user.lastname}} [(ngModel)]='newLastname'>
+            <button class="material-icons editIconClose" (click)="toggleEditLastname()">close</button>
+        </div>
+        <!-- Pour afficher une erreur si le champ ne contient pas au moins 3 caractères -->
+        <span class="errorSpan" *ngIf="lastnameError == true">
+            * Votre nom doit contenir au moins 3 caractères
+        </span>
+    </div>
+
+    <div class="userInfos">
+        <div>
+            Modifier mon prénom
+            <i class="material-icons editIcon" (click)="toggleEditFirstname()">edit</i>
+        </div>
+        <div class="userEdit" *ngIf="showEditFirstname == true">
+            <input class="editInput" type="text" placeholder={{user.firstname}} [(ngModel)]='newFirstname'>
+            <button class="material-icons editIconClose" (click)="toggleEditFirstname()">close</button>
+        </div>
+        <!-- Pour afficher une erreur si le champ ne contient pas au moins 3 caractères -->
+        <span class="errorSpan" *ngIf="firstnameError == true">
+            * Votre prénom doit contenir au moins 3 caractères
+        </span>
+    </div>
+
+    <div class="userInfos">
+        <div>
+            Modifier mon email
+            <i class="material-icons editIcon" (click)="toggleEditEmail()">edit</i>
+        </div>
+        <div class="userEdit" *ngIf="showEditEmail == true">
+            <input class="editInput" type="text" placeholder={{user.email}} [(ngModel)]='newEmail'>
+            <button class="material-icons editIconClose" (click)="toggleEditEmail()">close</button>
+        </div>
+        <!-- Pour afficher une erreur si le champ ne contient pas au moins 3 caractères -->
+        <span class="errorSpan" *ngIf="emailError == true">
+            * Votre email doit être au format : 'Example@email.com'
+        </span>
+    </div>
+
+    <div class="userInfos">
+        <div>
+            Modifier mon mot de passe
+            <i class="material-icons editIcon" (click)="toggleEditPassword()">edit</i>
+        </div>
+        <div class="userEdit" *ngIf="showEditPassword == true">
+            <input class="editInput" type="password" [(ngModel)]='newPassword'>
+            <button class="material-icons editIconClose" (click)="toggleEditPassword()">close</button>
+        </div>
+        <!-- Pour afficher une erreur si le champ ne contient pas au moins 3 caractères -->
+        <span class="errorSpan" *ngIf="passwordError == true">
+            * Votre mot de passe doit contenir au moins 6 caractères
+        </span>
+    </div>
+
+    <div class="userInfos">
+        <div *ngIf="showEditPassword == true">
+            Confirmation du mot de passe
+        </div>
+        <div class="userEdit" *ngIf="showEditPassword == true">
+            <input class="editInput" type="password" [(ngModel)]='newConfirmPassword'>
+            <button class="material-icons editIconClose" (click)="toggleEditPassword()">close</button>
+        </div>
+        <!-- Pour afficher une erreur si le champ ne contient pas au moins 3 caractères -->
+        <span class="errorSpan" *ngIf="confirmPasswordError == true">
+            * Les deux mots de passe doivent correspondre
+        </span>
+    </div>
+
+    <div class="userButtons">
+        <button (click)="goBack()">Retour</button>
+        <button (click)="updateInfos()">Valider</button>
+    </div>
+</div>
+
+<app-success-popup *ngIf="showSuccessPopup" message="Modifications enregistrées !"></app-success-popup>
+<app-error-popup *ngIf="showErrorPopup" message="Erreur de saisie !"></app-error-popup>

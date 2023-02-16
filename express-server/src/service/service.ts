@@ -100,8 +100,8 @@ export default class Service {
    */
   public updateUser = (
     id: number,
-    firstName: string,
     lastName: string,
+    firstName: string,
     email: string,
     password: string,
     cart: Pokemon[]
@@ -112,8 +112,8 @@ export default class Service {
 
     // Récupère l'utilisateur et met à jour ses informations
     const userToUpdate = this._repository.getAllUsers()[index];
-    userToUpdate.firstname = firstName;
     userToUpdate.lastname = lastName;
+    userToUpdate.firstname = firstName;
     userToUpdate.email = email;
     userToUpdate.password = password;
     userToUpdate.cart = cart;
