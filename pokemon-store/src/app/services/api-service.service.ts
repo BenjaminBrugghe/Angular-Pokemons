@@ -72,6 +72,24 @@ export class ApiServiceService {
   };
 
   /**
+   * Modifie les informations d'un utilisateur
+   * @param user L'utilisateur à modifier
+   * @returns L'utilisateur modifié
+   */
+  public editUser = async (user: any): Promise<Users> => {
+    const response = await fetch(`${this._URL_USERS}/${user.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+    return response;
+  };
+
+  /**
    * Ajoute le pokémon cliqué au panier de l'utilisateur
    * @param id L'id de l'utilisateur
    * @param pokemon Le pokémon qui a été cliqué
