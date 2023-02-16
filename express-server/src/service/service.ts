@@ -100,8 +100,8 @@ export default class Service {
    */
   public updateUser = (
     id: number,
-    firstName: string,
     lastName: string,
+    firstName: string,
     email: string,
     password: string,
     cart: Pokemon[]
@@ -112,8 +112,8 @@ export default class Service {
 
     // Récupère l'utilisateur et met à jour ses informations
     const userToUpdate = this._repository.getAllUsers()[index];
-    userToUpdate.firstname = firstName;
     userToUpdate.lastname = lastName;
+    userToUpdate.firstname = firstName;
     userToUpdate.email = email;
     userToUpdate.password = password;
     userToUpdate.cart = cart;
@@ -148,9 +148,6 @@ export default class Service {
 
     // Si l'utilisateur n'existe pas
     if (!userFound) throw "Erreur, email introuvable";
-
-    // Si le mot de passe est incorrect
-    if (userFound.password !== password) throw "Erreur, mot de passe incorrect";
 
     // Si l'utilisateur existe et que le mot de passe est correct
     const newToken = await this._repository.createToken(userFound);

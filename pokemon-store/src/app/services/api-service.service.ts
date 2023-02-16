@@ -15,6 +15,7 @@ export class ApiServiceService {
   private _URL_VERIFY_TOKEN = 'http://localhost:3001/verifyToken';
   private _URL_VERIFY_EMAIL = 'http://localhost:3001/verifyEmail';
   private _URL_VERIFY_PASSWORD = 'http://localhost:3001/verifyPassword';
+  private _URL_HASH_PASSWORD = 'http://localhost:3001/hashPassword';
 
   //#region USERS
 
@@ -68,6 +69,46 @@ export class ApiServiceService {
     })
       .then((response) => response.json())
       .catch((error) => console.log(error));
+    return response;
+  };
+
+  /**
+   * Modifie les informations d'un utilisateur
+   * @param user L'utilisateur à modifier
+   * @returns L'utilisateur modifié
+   */
+  public editUser = async (user: any): Promise<Users> => {
+    const response = await fetch(`${this._URL_USERS}/${user.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+    return response;
+  };
+
+  /**
+   * Hash le mot de passe de l'utilisateur
+   * @param password Le mot de passe à hasher
+   * @returns Le mot de passe hashé
+   */
+  public hashPassword = async (password: string): Promise<any> => {
+    const user = {
+      password: password,
+    };
+    const response = await fetch(this._URL_HASH_PASSWORD, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.text())
+      .catch((error) => console.log(error));
+    console.log('response : ', response);
     return response;
   };
 
