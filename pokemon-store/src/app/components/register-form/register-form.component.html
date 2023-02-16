@@ -1,32 +1,32 @@
 <div class="registerFormContainer">
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="registerForm">
 
-        <label class="registerLabel" for="lastName">Nom : </label>
+        <label class="registerLabel" for="lastname">Nom : </label>
         <div class="registerDiv">
-            <input class="registerInput" type="text" id="lastName" formControlName="lastName" placeholder="Votre nom" />
-            <span class="errorSpan" *ngIf="submitted && form['lastName'].invalid">
+            <input class="registerInput" type="text" id="lastname" formControlName="lastname" placeholder="Votre nom" />
+            <span class="errorSpan" *ngIf="submitted && form['lastname'].invalid">
                 <!-- Pour afficher une erreur si le champ ne contient pas au moins 3 caractères -->
-                <span *ngIf="form['lastName'].hasError('minlength')">
+                <span *ngIf="form['lastname'].hasError('minlength')">
                     * Votre nom doit contenir au moins 3 caractères
                 </span>
                 <!-- Pour afficher une erreur si le champ est vide -->
-                <span *ngIf="!form['lastName'].value">
+                <span *ngIf="!form['lastname'].value">
                     * Votre nom est requis
                 </span>
             </span>
         </div>
 
-        <label class="registerLabel" for="firstName">Prénom : </label>
+        <label class="registerLabel" for="firstname">Prénom : </label>
         <div class="registerDiv">
-            <input class="registerInput" type="text" id="firstName" formControlName="firstName"
+            <input class="registerInput" type="text" id="firstname" formControlName="firstname"
                 placeholder="Votre prénom" />
-            <span class="errorSpan" *ngIf="submitted && form['firstName'].invalid">
+            <span class="errorSpan" *ngIf="submitted && form['firstname'].invalid">
                 <!-- Pour afficher une erreur si le champ ne contient pas au moins 3 caractères -->
-                <span *ngIf="form['firstName'].hasError('minlength')">
+                <span *ngIf="form['firstname'].hasError('minlength')">
                     * Votre prénom doit contenir au moins 3 caractères
                 </span>
                 <!-- Pour afficher une erreur si le champ est vide -->
-                <span *ngIf="!form['firstName'].value">
+                <span *ngIf="!form['firstname'].value">
                     * Votre prénom est requis
                 </span>
             </span>
@@ -98,3 +98,5 @@
 
     </form>
 </div>
+<app-success-popup *ngIf="showSuccessPopup" message="Compte créé avec succès !"></app-success-popup>
+<app-error-popup *ngIf="showErrorPopup" message="Erreur, cet email est déjà utilisé !"></app-error-popup>

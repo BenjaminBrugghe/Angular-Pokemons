@@ -39,8 +39,8 @@ export default class Controller {
    * Récupère les données du body et appelle la méthode createUser() du service
    */
   public createUser = (req: Request, res: Response): void => {
-    const firstname: string = req.body.firstName;
-    const lastname: string = req.body.lastName;
+    const lastname: string = req.body.lastname;
+    const firstname: string = req.body.firstname;
     const email: string = req.body.email;
     const password: string = req.body.password;
     const newUser: Promise<User> = this._service.createUser(
@@ -57,15 +57,15 @@ export default class Controller {
    */
   public updateUser = (req: Request, res: Response): void => {
     const id: string = req.params.id;
-    const firstname: string = req.body.firstname;
     const lastname: string = req.body.lastname;
+    const firstname: string = req.body.firstname;
     const email: string = req.body.email;
     const password: string = req.body.password;
     const cart: Pokemons[] = req.body.cart;
     const updatedUser: User = this._service.updateUser(
       +id,
-      firstname,
       lastname,
+      firstname,
       email,
       password,
       cart
@@ -116,6 +116,19 @@ export default class Controller {
   //#endregion
 
   //#region VERIFICATIONS
+
+  /**
+   * Récupère les données du body et appelle la méthode hashPassword() du service
+   */
+  public hashPassword = async (req: Request, res: Response): Promise<void> => {
+    const password = req.body.password;
+    try {
+      const result = await this._service.hashPassword(password);
+      res.send(result);
+    } catch (error) {
+      res.send(error);
+    }
+  };
 
   /**
    * Récupère les données du body et appelle la méthode verifyHashPassword() du service

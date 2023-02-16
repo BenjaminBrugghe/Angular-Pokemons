@@ -1,5 +1,8 @@
 body {
   margin: 0;
   background-image: url("./assets/images/pokemon.jpg");
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }

@@ -16,6 +16,7 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { SuccessPopupComponent } from './components/snackbars/success-popup/success-popup.component';
 import { ErrorPopupComponent } from './components/snackbars/error-popup/error-popup.component';
+import { UserAccountComponent } from './components/user-account/user-account.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ErrorPopupComponent } from './components/snackbars/error-popup/error-po
     NotfoundComponent,
     SuccessPopupComponent,
     ErrorPopupComponent,
+    UserAccountComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { UserAccountComponent } from './components/user-account/user-account.component';
 //
 import { AuthGuardService as AuthGuard } from './services/auth.service';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
@@ -21,6 +22,11 @@ const routes: Routes = [
     path: 'homePage',
     canActivate: [AuthGuard], // Route protégée par auth.service.ts
     component: HomepageComponent,
+  },
+  {
+    path: 'userAccount',
+    canActivate: [AuthGuard], // Route protégée par auth.service.ts
+    component: UserAccountComponent,
   },
   {
     path: 'unauthorized',

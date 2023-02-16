@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 })
 export class RegisterFormComponent {
   userForm: FormGroup = this.formBuilder.group({
-    firstName: ['', [Validators.required, Validators.minLength(3)]],
-    lastName: ['', [Validators.required, Validators.minLength(3)]],
+    firstname: ['', [Validators.required, Validators.minLength(3)]],
+    lastname: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
     confirmPassword: ['', [Validators.required, Validators.minLength(6)]],
@@ -30,14 +30,18 @@ export class RegisterFormComponent {
     return this.userForm.controls;
   }
 
+  // Pour afficher les popups
+  showSuccessPopup: boolean = false;
+  showErrorPopup: boolean = false;
+
   /**
    * Crée un nouvel utilisateur avec les valeurs du formulaire
    * @returns un nouvel utilisateur
    */
   private createNewUser(): Users {
     return new Users(
-      this.userForm.value.firstName,
-      this.userForm.value.lastName,
+      this.userForm.value.firstname,
+      this.userForm.value.lastname,
       this.userForm.value.email,
       this.userForm.value.password
     );
@@ -57,6 +61,7 @@ export class RegisterFormComponent {
 
   public async onSubmit(): Promise<void> {
     this.submitted = true;
+    this.showErrorPopup = false;
 
     // Si le formulaire est valide
     if (this.userForm.valid) {
@@ -67,15 +72,17 @@ export class RegisterFormComponent {
 
       // Affiche une erreur si l'email existe déjà, sinon crée un nouvel utilisateur
       if (emailAlreadyExist) {
-        alert('Email déjà existant');
+        this.showErrorPopup = true;
       } else {
         const newUser: Users = this.createNewUser();
         this._service.createUser(newUser);
-        alert('Votre compte a bien été créé !');
-        this.router.navigate(['/']);
-      }
+        this.showSuccessPopup = true;
 
-      // ********************** Hasher le password
+        // Redirige vers la page de connection après 1.5s
+        window.setTimeout(() => {
+          this.router.navigate(['/']);
+        }, 1500);
+      }
     }
   }
 }
