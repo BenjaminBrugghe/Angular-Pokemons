@@ -14,7 +14,7 @@ export class ApiServiceService {
   private _URL_GETBYEMAIL = 'https://localhost:7109/getByEmail';
   // private _URL_POKEMONS = 'https://localhost:7109/api/Pokemon';
   // private _URL_PANIER = 'https://localhost:7109/api/Panier';
-  // private _URL_CREATE_TOKEN = '';
+  private _URL_CREATE_TOKEN = 'https://localhost:7109/api/Token';
   // private _URL_VERIFY_TOKEN = '';
   private _URL_VERIFY_EMAIL = 'https://localhost:7109/api/Email';
   // private _URL_HASH_PASSWORD = 'https://localhost:7109/api/Password';
@@ -24,7 +24,7 @@ export class ApiServiceService {
   // Devrait provenir d'un fichier .env
   // private _URL_USERS = 'http://localhost:3001/users';
   private _URL_POKEMONS = 'http://localhost:3001/pokemons';
-  private _URL_CREATE_TOKEN = 'http://localhost:3001/createToken';
+  // private _URL_CREATE_TOKEN = 'http://localhost:3001/createToken';
   private _URL_VERIFY_TOKEN = 'http://localhost:3001/verifyToken';
   // private _URL_VERIFY_EMAIL = 'http://localhost:3001/verifyEmail';
   private _URL_HASH_PASSWORD = 'http://localhost:3001/hashPassword';
