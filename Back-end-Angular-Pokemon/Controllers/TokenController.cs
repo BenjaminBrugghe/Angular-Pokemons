@@ -13,13 +13,6 @@ namespace Back_end_Angular_Pokemon.Controllers
     {
         private TokenService _service = new TokenService();
 
-        // GET: api/<TokenController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
         // POST api/<TokenController>
         [HttpPost]
         public string CreateToken([FromBody] Utilisateurs user)
@@ -27,5 +20,12 @@ namespace Back_end_Angular_Pokemon.Controllers
             return _service.createToken(user);
         }
 
+        // GET: api/<TokenController>
+        [HttpPost]
+        [Route("/verifyToken")]
+        public Utilisateurs VerifyToken([FromBody] string token) 
+        {
+            return _service.verifyToken(token);
+        }
     }
 }
