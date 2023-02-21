@@ -8,14 +8,27 @@ import Pokemons from '../models/Pokemons';
 export class ApiServiceService {
   constructor() {}
 
+  // AspNetCore
   // Devrait provenir d'un fichier .env
-  private _URL_USERS = 'http://localhost:3001/users';
+  private _URL_USERS = 'https://localhost:7109/api/Utilisateur';
+  private _URL_GETBYEMAIL = 'https://localhost:7109/getByEmail';
+  // private _URL_POKEMONS = 'https://localhost:7109/api/Pokemon';
+  // private _URL_PANIER = 'https://localhost:7109/api/Panier';
+  // private _URL_CREATE_TOKEN = '';
+  // private _URL_VERIFY_TOKEN = '';
+  private _URL_VERIFY_EMAIL = 'https://localhost:7109/api/Email';
+  // private _URL_HASH_PASSWORD = 'https://localhost:7109/api/Password';
+  private _URL_VERIFY_PASSWORD = 'https://localhost:7109/verifyPassword';
+
+  // Express-server
+  // Devrait provenir d'un fichier .env
+  // private _URL_USERS = 'http://localhost:3001/users';
   private _URL_POKEMONS = 'http://localhost:3001/pokemons';
   private _URL_CREATE_TOKEN = 'http://localhost:3001/createToken';
   private _URL_VERIFY_TOKEN = 'http://localhost:3001/verifyToken';
-  private _URL_VERIFY_EMAIL = 'http://localhost:3001/verifyEmail';
-  private _URL_VERIFY_PASSWORD = 'http://localhost:3001/verifyPassword';
+  // private _URL_VERIFY_EMAIL = 'http://localhost:3001/verifyEmail';
   private _URL_HASH_PASSWORD = 'http://localhost:3001/hashPassword';
+  // private _URL_VERIFY_PASSWORD = 'http://localhost:3001/verifyPassword';
 
   //#region USERS
 
@@ -48,7 +61,13 @@ export class ApiServiceService {
    * @returns L'utilisateur correspondant à l'email
    */
   public getUserByEmail = async (email: string): Promise<Users> => {
-    const response = await fetch(`${this._URL_USERS}/email/${email}`)
+    const response = await fetch(this._URL_GETBYEMAIL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(email),
+    })
       .then((response) => response.json())
       .catch((error) => console.log(error));
     return response;
@@ -157,15 +176,12 @@ export class ApiServiceService {
    * @returns true si l'email existe déjà, false sinon
    */
   public checkEmailAlreadyExists = async (email: string): Promise<boolean> => {
-    const user = {
-      email: email,
-    };
     const response = await fetch(this._URL_VERIFY_EMAIL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify(email),
     })
       .then((response) => response.json())
       .catch((error) => console.log(error));
@@ -183,6 +199,8 @@ export class ApiServiceService {
     password: string
   ): Promise<boolean> => {
     const user = {
+      lastname: '',
+      firstname: '',
       email: email,
       password: password,
     };
