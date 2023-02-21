@@ -15,7 +15,7 @@ export class ApiServiceService {
   // private _URL_POKEMONS = 'https://localhost:7109/api/Pokemon';
   // private _URL_PANIER = 'https://localhost:7109/api/Panier';
   private _URL_CREATE_TOKEN = 'https://localhost:7109/api/Token';
-  // private _URL_VERIFY_TOKEN = '';
+  private _URL_VERIFY_TOKEN = 'https://localhost:7109/verifyToken';
   private _URL_VERIFY_EMAIL = 'https://localhost:7109/api/Email';
   // private _URL_HASH_PASSWORD = 'https://localhost:7109/api/Password';
   private _URL_VERIFY_PASSWORD = 'https://localhost:7109/verifyPassword';
@@ -25,7 +25,7 @@ export class ApiServiceService {
   // private _URL_USERS = 'http://localhost:3001/users';
   private _URL_POKEMONS = 'http://localhost:3001/pokemons';
   // private _URL_CREATE_TOKEN = 'http://localhost:3001/createToken';
-  private _URL_VERIFY_TOKEN = 'http://localhost:3001/verifyToken';
+  // private _URL_VERIFY_TOKEN = 'http://localhost:3001/verifyToken';
   // private _URL_VERIFY_EMAIL = 'http://localhost:3001/verifyEmail';
   private _URL_HASH_PASSWORD = 'http://localhost:3001/hashPassword';
   // private _URL_VERIFY_PASSWORD = 'http://localhost:3001/verifyPassword';
@@ -249,11 +249,12 @@ export class ApiServiceService {
    */
   public verifyToken = async (token: string) => {
     const response = await fetch(this._URL_VERIFY_TOKEN, {
-      method: 'GET',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: token,
       },
+      body: JSON.stringify(token),
     })
       .then((response) => response.json())
       .catch((error) => console.log(error));
