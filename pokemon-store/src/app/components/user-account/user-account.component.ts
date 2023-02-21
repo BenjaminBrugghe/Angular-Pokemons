@@ -65,7 +65,7 @@ export class UserAccountComponent {
     const tokenExists = localStorage.getItem('token');
     if (tokenExists) {
       const token = await this._service.verifyToken(tokenExists);
-      this.user = await this._service.getUserById(token.id);
+      this.user = await this._service.getUserByEmail(token.email);
     }
   }
 
