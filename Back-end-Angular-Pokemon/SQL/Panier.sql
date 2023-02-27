@@ -12,8 +12,3 @@ CREATE TABLE PANIER(
 	POKEMON_DESCRIPTION VARCHAR(300) NOT NULL,
 	POKEMON_IMAGE VARCHAR (300) NOT NULL
 )
-
-INSERT INTO [dbo].PANIER ( [UTILISATEUR_ID], [POKEMON_ID], [POKEMON_NAME],[POKEMON_TYPE1],[POKEMON_TYPE2],[POKEMON_EVOLUTION],[POKEMON_PRICE],[POKEMON_DESCRIPTION],[POKEMON_IMAGE] )
-VALUES
-(N'1', N'1', N'Salamèche', N'Feu', N'', N'True', N'12.99', N'Salamèche est un pokémon de départ',N'Salamèche_image_Url'),
-(N'1', N'2', N'Bulbizarre', N'Plante', N'Poison', N'True', N'12.99', N'Bulbizarre est un pokémon de départ',N'Bulbizarre')
