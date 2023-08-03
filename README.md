@@ -24,7 +24,7 @@ ng serve
 npm i
 ```
 ### Ensuite : Créer un fichier '.env' à la racine et y renseigner les informations requises (voir fichier '.env.example')
-### Puis lancer le serveur
+### Puis lancer le serveur !
 ```
 npm run start
 ```
